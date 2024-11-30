@@ -270,7 +270,7 @@ Notification --> FetchNotifications
 
 ```
 
-![Component Diagram](./Diagrams/Component.png)
+![Component Diagram](./Diagrams/component.png)
 
 # 3. Deployment Diagram - Google Pay
 
