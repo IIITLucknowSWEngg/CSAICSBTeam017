@@ -134,7 +134,7 @@ MerchantGateway --> MerchantDB : Log Merchant Data
 
 ```
 
-![System Context](./C.png)
+![System Context](./Diagrams/C.png)
 
 
 # 3. Component Diagram - Google Pay Payment Processing
@@ -218,7 +218,7 @@ Notification ..> NotificationInterface : implements
 
 ```
 
-![Component Diagram](./S.png)
+![Component Diagram](./Diagrams/S.png)
 
 ```plantuml
 
@@ -270,7 +270,7 @@ Notification --> FetchNotifications
 
 ```
 
-![Component Diagram](./Component.png)
+![Component Diagram](./Diagrams/Component.png)
 
 # 3. Deployment Diagram - Google Pay
 
@@ -344,4 +344,4 @@ cloud "Third-Party Services" {
 @enduml
 
 ```
-![Deployment Diagram](./Deployment.png)
+![Deployment Diagram](./Diagrams/Deployment.png)
