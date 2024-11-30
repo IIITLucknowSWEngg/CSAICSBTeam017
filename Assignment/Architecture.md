@@ -77,7 +77,7 @@ Support --> CustomerSupport : Handle User Issues
 
 ```
 
-![System Context](./system.png)
+![System Context](./Diagrams/system.png)
 
 # 2. Container Diagram 
 
