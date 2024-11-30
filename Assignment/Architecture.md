@@ -4,80 +4,36 @@
 
 # 1. System Context Diagram - Google Pay
 
-```plantuml
+```
 @startuml
+title System Context Diagram for Google Pay
 
-' External Actors
-actor "User" as User
-actor "Merchant" as Merchant
-actor "Bank" as Bank
-actor "Payment Gateway" as PaymentGateway
-actor "Customer Support" as CustomerSupport
-actor "Third-Party Apps" as ThirdPartyApps
-actor "Regulatory Authorities" as RegulatoryAuthorities
-actor "Card Network (Visa/Mastercard)" as CardNetwork
+actor User as U
+actor Merchant as M
+actor Bank as B
+actor PaymentNetwork as PN
 
-' System Boundary: Google Pay
-package "Google Pay" {
-
-    ' Subsystems
-    rectangle "User Registration \nand Authentication" as Registration
-    rectangle "Bank Account \nand Card Linking" as AccountLinking
-    rectangle "Transaction Processing" as Transactions
-    rectangle "Payment to Merchants" as MerchantPayments
-    rectangle "Peer-to-Peer Transfers" as PeerTransfers
-    rectangle "Bill Payments" as BillPayments
-    rectangle "Rewards \nand Cashback" as Rewards
-    rectangle "Fraud Detection \nand Security" as Security
-    rectangle "Notifications \nand Alerts" as Notifications
-    rectangle "In-App Support \nand Help" as Support
-    rectangle "User Transaction \nand Spending History" as History
+package "Google Pay System" {
+    [Google Pay Mobile App] as GPApp
+    [Google Pay Backend Services] as GPBackend
 }
 
-' Relationships between actors and system components
-User --> Registration : Sign Up/Login
-User --> AccountLinking : Link Bank/Payment Card
-User --> Transactions : Initiate Payment
-User --> PeerTransfers : Send/Receive Money
-User --> BillPayments : Pay Bills
-User --> Rewards : Earn Cashback/Rewards
-User --> History : View Transaction History
-User --> Notifications : Receive Payment Alerts
-User --> Support : Get Help
-
-Merchant --> MerchantPayments : Accept Payment
-Merchant --> Notifications : Receive Payment Alerts
-Merchant --> Support : Get Help
-
-Bank --> AccountLinking : Verify User Account
-Bank --> Transactions : Process Payment
-Bank --> MerchantPayments : Settle Merchant Transactions
-
-PaymentGateway --> Transactions : Process Payment Authorization
-PaymentGateway --> MerchantPayments : Process Merchant Payment
-
-CardNetwork --> AccountLinking : Verify Card Details
-CardNetwork --> Transactions : Process Card Payment
-
-ThirdPartyApps --> PeerTransfers : Initiate Payment Through API
-ThirdPartyApps --> Transactions : Use Google Pay for In-App Payments
-
-RegulatoryAuthorities --> Security : Compliance Check and Monitoring
-
-' External Interactions
-Transactions --> PaymentGateway : Process Payments
-AccountLinking --> Bank : Link Bank Account
-AccountLinking --> CardNetwork : Link Payment Card
-Notifications --> User : Send Transaction Notifications
-Notifications --> Merchant : Send Payment Notifications
-Support --> CustomerSupport : Handle User Issues
+U --> GPApp : Makes Payment Request
+M <-- GPApp : Payment Confirmation
+GPApp --> GPBackend : Sends Payment Details
+GPBackend --> PN : Routes Payment
+PN --> B : Processes Transaction
+B --> PN : Sends Transaction Status
+PN --> GPBackend : Updates Payment Status
+GPBackend --> GPApp : Notifies Payment Status
+GPApp --> U : Displays Payment Status
 
 @enduml
 
 
 ```
 
-![System Context](./Diagrams/system.png)
+![System Context](./Diagrams/context.png)
 
 # 2. Container Diagram 
 
