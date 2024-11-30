@@ -79,49 +79,198 @@ Support --> CustomerSupport : Handle User Issues
 
 ![System Context](./system.png)
 
-
-# 2. Component Diagram - Google Pay Payment Processing
+# 2. Container Diagram 
 
 ```plantuml
+
 @startuml
-
-' Component Diagram for Admin in Google Pay System
-
-package "Google Pay Admin" {
-
-    ' Admin Components
-    component "User Management" as UserMgmt
-    component "Transaction Monitoring" as TxnMonitoring
-    component "Fraud Detection & Security" as FraudSecurity
-    component "Merchant Management" as MerchantMgmt
-    component "Compliance & Reporting" as ComplianceReporting
-    component "Notifications Management" as NotificationsMgmt
-    component "Support Management" as SupportMgmt
-}
-
-' External Admin Actor
+actor "User" as User
+actor "Merchant" as Merchant
 actor "Admin" as Admin
 
-' Relationships between Admin and components
-Admin --> UserMgmt : Manage Users
-Admin --> TxnMonitoring : Monitor Transactions
-Admin --> FraudSecurity : Review Fraud Alerts
-Admin --> MerchantMgmt : Manage Merchants
-Admin --> ComplianceReporting : Generate Reports
-Admin --> NotificationsMgmt : Manage Alerts
-Admin --> SupportMgmt : Oversee Support Operations
+package "Frontend Layer" {
+    [GPay App (Web/Mobile)] as Frontend
+}
 
-' Relationships between components
-TxnMonitoring --> FraudSecurity : Trigger Fraud Detection
-TxnMonitoring --> ComplianceReporting : Provide Transaction Data
-NotificationsMgmt --> FraudSecurity : Send Alerts
+package "Backend Layer" {
+    [Backend API] as BackendAPI
+    [User Management Service] as UserService
+    [Payment Processing Service] as PaymentService
+    [Notification Service] as NotificationService
+    [Analytics Service] as AnalyticsService
+}
 
+package "External Services Layer" {
+    [Banking API] as BankingAPI
+    [Merchant Gateway] as MerchantGateway
+    [Notification Provider] as NotificationProvider
+}
+
+package "Data Layer" {
+    [User Database] as UserDB
+    [Transaction Database] as TransactionDB
+    [Merchant Database] as MerchantDB
+}
+
+User --> Frontend : Login, Add Cards, Make Payments
+Merchant --> Frontend : Receive Payments
+Admin --> BackendAPI : Manage Users, Transactions
+
+Frontend --> BackendAPI : API Requests
+BackendAPI --> UserService : User Authentication
+BackendAPI --> PaymentService : Payment Processing
+BackendAPI --> NotificationService : Notifications
+BackendAPI --> AnalyticsService : Usage Analytics
+
+PaymentService --> BankingAPI : Process Transactions
+PaymentService --> MerchantGateway : Route Merchant Payments
+
+NotificationService --> NotificationProvider : Push Notifications
+
+UserService --> UserDB : Save/Update User Info
+PaymentService --> TransactionDB : Save Transactions
+MerchantGateway --> MerchantDB : Log Merchant Data
 @enduml
 
 ```
 
-![Component Diagram](./component.png)
+![System Context](./C.png)
 
+
+# 3. Component Diagram - Google Pay Payment Processing
+
+```plantuml
+@startuml
+
+@startuml
+title Class-based Component-Level Design for G-Pay
+
+' Main Class - GPay
+class GPay {
+  - userAccounts
+  - transactionHistory
+  - notifications
+  --
+  + initializeApp()
+  + authenticateUser()
+  + manageWallet()
+  + initiateTransaction()
+}
+
+' Interfaces
+interface PaymentInterface {
+  + initiatePayment(amount, method)
+  + verifyPayment(transactionID)
+  + refundPayment(transactionID)
+}
+
+interface WalletInterface {
+  + addMoney(amount)
+  + transferFunds(toAccount, amount)
+  + getBalance()
+}
+
+interface NotificationInterface {
+  + sendNotification(userID, message)
+  + scheduleReminder(userID, dateTime)
+  + fetchNotifications(userID)
+}
+
+' Elaborated Design Classes
+class Payment {
+  - amount
+  - method
+  - status
+  --
+  + processPayment()
+  + verifyTransaction()
+  + issueRefund()
+}
+
+class Wallet {
+  - balance
+  - linkedAccounts
+  --
+  + deposit()
+  + withdraw()
+  + checkBalance()
+}
+
+class Notification {
+  - notificationID
+  - userID
+  - type
+  --
+  + send()
+  + fetchAll()
+  + deleteNotification()
+}
+
+' Relationships
+GPay --> Payment : manages
+GPay --> Wallet : interacts with
+GPay --> Notification : notifies
+
+Payment ..> PaymentInterface : implements
+Wallet ..> WalletInterface : implements
+Notification ..> NotificationInterface : implements
+@enduml
+
+```
+
+![Component Diagram](./S.png)
+
+```plantuml
+
+@startuml
+title G-Pay Traditional Component-Level Design
+
+' Main Component
+component "G-Pay System" as GPay
+
+' Subcomponents
+component "User Authentication" as Auth
+component "Transaction Management" as Transaction
+component "Wallet Management" as Wallet
+component "Notification System" as Notification
+
+' Lower-Level Components for Transaction Management
+component "Initiate Payment" as InitPayment
+component "Verify Payment" as VerifyPayment
+component "Refund Payment" as RefundPayment
+
+' Lower-Level Components for Wallet Management
+component "Add Money" as AddMoney
+component "Transfer Funds" as TransferFunds
+component "Check Balance" as CheckBalance
+
+' Lower-Level Components for Notification System
+component "Send Notification" as SendNotification
+component "Schedule Reminder" as ScheduleReminder
+component "Fetch Notifications" as FetchNotifications
+
+' Connections
+GPay --> Auth
+GPay --> Transaction
+GPay --> Wallet
+GPay --> Notification
+
+Transaction --> InitPayment
+Transaction --> VerifyPayment
+Transaction --> RefundPayment
+
+Wallet --> AddMoney
+Wallet --> TransferFunds
+Wallet --> CheckBalance
+
+Notification --> SendNotification
+Notification --> ScheduleReminder
+Notification --> FetchNotifications
+@enduml
+
+```
+
+![Component Diagram](./Component.png)
 
 # 3. Deployment Diagram - Google Pay
 
