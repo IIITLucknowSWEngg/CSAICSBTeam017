@@ -124,16 +124,16 @@ Users can log in, initiate payments, view transaction history, and receive notif
 - **Login Page:** Includes fields for username and password, and a login button.  
 
 - **Home Page:** Displays a list of transactions and payment options.
-![alt text](Diagrams/Design/a4.png)
+![alt text](Diagrams/Design/a4.jpeg)
 
 - **Profile Page:** Displays all Profile options
-![alt text](Diagrams/Design/a1.png)
+![alt text](Diagrams/Design/a1.jpeg)
 
 - **User to User Transaction Page:** Displays all User to User Transactions
-![alt text](Diagrams/Design/a3.png)
+![alt text](Diagrams/Design/a3.jpeg)
 
 - **Money Management:**
-![alt text](Diagrams/Design/a2.png)
+![alt text](Diagrams/Design/a2.jpeg)
 
 ### 6.3 Screen Objects and Actions
 | **Screen Object**  | **Action**                  |  

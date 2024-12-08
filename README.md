@@ -136,6 +136,9 @@ Feel free to reach out to any of our team members for any queries, ideas, or col
 - Hardee Parekh: parekhhardee@gmail.com
 - Shresth Sharma: shresthsharma1711@gmail.com
 
+## StakeHolders Video
+
+https://drive.google.com/drive/folders/1KNnS6tNx3r4YGswxr2Ka63-zM7bRqVN5
 ---
 
 ## 🎉 Acknowledgments
