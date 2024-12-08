@@ -121,19 +121,17 @@ def login(username, password):
 Users can log in, initiate payments, view transaction history, and receive notifications. The design emphasizes simplicity and responsiveness.
 
 ### 6.2 Screen Images
-- **Login Page:** Includes fields for username and password, and a login button.  
+- **Home Page:** Displays a list of transactions and payment options.  
+   <img src="Diagrams/Design/a4.jpeg" width="200">
 
-- **Home Page:** Displays a list of transactions and payment options.
-![alt text](Diagrams/Design/a4.jpeg)
+- **Profile Page:** Displays all Profile options.  
+   <img src="Diagrams/Design/a1.jpeg" width="200">
 
-- **Profile Page:** Displays all Profile options
-![alt text](Diagrams/Design/a1.jpeg)
+- **User to User Transaction Page:** Displays all User to User Transactions.  
+   <img src="Diagrams/Design/a3.jpeg" width="200">
 
-- **User to User Transaction Page:** Displays all User to User Transactions
-![alt text](Diagrams/Design/a3.jpeg)
-
-- **Money Management:**
-![alt text](Diagrams/Design/a2.jpeg)
+- **Money Management:**  
+   <img src="Diagrams/Design/a2.jpeg" width="200">
 
 ### 6.3 Screen Objects and Actions
 | **Screen Object**  | **Action**                  |  
