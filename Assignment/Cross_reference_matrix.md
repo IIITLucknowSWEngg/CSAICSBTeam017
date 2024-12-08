@@ -20,9 +20,55 @@ This matrix maps the **stakeholders**, **requirements**, **architecture/design c
 
 ---
 
-### **Explanation of Matrix Updates**:
-1. **URD Sections**: The corresponding sections in your **User Requirements Document** are mapped, with the **section numbers** included for clarity.
-2. **SRS Sections**: These are the specific sections in your **Software Requirements Specification** that pertain to the functionality.
-3. **Architecture/Design Topics**: The exact **architectural and design components** from your documents are referenced here. These include services like **Payment Processing Service**, **Authentication Service**, and **Fraud Detection Service**.
-4. **Testing Scenarios**: These include **functional, security, and load tests**, which are mapped directly from your **Test Documentation**.
-5. **Diagram Columns**: **Diagrams** are included as per your request to visually represent the relevant components in your project, making the matrix more comprehensive.
+### Explanation of Matrix Components
+
+#### **Project Sponsor**  
+- **URD Section**: The **purpose (1.1)** and **scope (1.2)** define the overall objectives and boundaries of the project. The sponsor oversees ensuring these objectives align with the business goals.  
+- **SRS Section**: The **scope (1.2)** in the SRS elaborates on the deliverables, focusing on high-level expectations.  
+- **Architecture/Design Topics**: The **System Context Diagram** illustrates how the Google Pay clone integrates with external entities like users, merchants, banks, and payment networks.  
+- **Testing Scenarios**: Not applicable directly since the sponsor’s role is at the strategic level.  
+- **Diagram**: The **System Context Diagram** provides a visual overview of the system's interaction with external stakeholders.  
+
+#### **Project Manager**  
+- **URD Section**: **Assumptions (2.5)** and **constraints (2.4)** define the boundaries within which the project manager operates, such as dependencies on third-party APIs or regulatory compliance.  
+- **SRS Section**: The corresponding sections in the SRS (2.6 and 2.4) expand on these assumptions, detailing project dependencies like stable internet connections and banking integration.  
+- **Architecture/Design Topics**: The **Microservices Architecture** and **Container Diagram** ensure modular design, enabling better resource allocation and management by the project manager.  
+- **Testing Scenarios**: Not directly applicable but ensures alignment with testing objectives and deadlines.  
+- **Diagram**: The **Container Diagram** visually represents modular components, aiding project planning.  
+
+#### **Development Team**  
+- **URD Section**: **Functional requirements (3.1–3.6)** specify the features to be developed, such as registration, payment processing, and rewards.  
+- **SRS Section**: **System features (3.1–3.4)** translate these into detailed technical requirements for implementation.  
+- **Architecture/Design Topics**: Includes **Frontend and Backend Layers**, **Payment Service**, **User Service**, and **Notification Service**, defining the components responsible for fulfilling each requirement.  
+- **Testing Scenarios**: Focus on **integration testing** to ensure seamless communication between services, along with feature-specific implementation validation.  
+- **Diagram**: The **Component Diagram** breaks down these services, guiding development.  
+
+#### **UI/UX Designers**  
+- **URD Section**: **User characteristics (2.3)** and **usability requirements (4.3)** define the expectations for a user-friendly interface.  
+- **SRS Section**: **User Interfaces (4.1)** elaborate on the technical aspects, like supporting different screen sizes and WCAG 2.1 compliance.  
+- **Architecture/Design Topics**: Covers **Frontend Design** and **User Interface Mockups**, ensuring usability standards are met.  
+- **Testing Scenarios**: Includes **UI/UX Testing** and **Accessibility Testing**, verifying ease of use for all users, including those with disabilities.  
+- **Diagram**: The **Component Diagram** highlights interactions between the UI and backend systems.  
+
+#### **Quality Assurance (QA) Team**  
+- **URD Section**: **Security (3.5)** and **customer support (3.6)** requirements focus on reliability and bug-free user experience.  
+- **SRS Section**: Includes **availability and reliability (5.3)** and **security requirements (5.2)** to guide quality assurance goals.  
+- **Architecture/Design Topics**: Focuses on components like the **Notification Service**, **Fraud Detection Service**, and **User Management Service**.  
+- **Testing Scenarios**: Includes **functional testing**, **security testing**, and **load testing**, ensuring system reliability under varying conditions.  
+- **Diagram**: The **Deployment Diagram** shows how services are distributed, aiding in testing scalability and fault tolerance.  
+
+#### **End Users (Consumers)**  
+- **URD Section**: Features like **User Registration (3.1)**, **Payment Processing (3.2)**, and **Rewards (3.4)** directly cater to consumer needs.  
+- **SRS Section**: Corresponds to **Authentication (3.1)**, **Money Transfer (3.2)**, and **Rewards & Cashback (3.4)**, detailing the implementation of these features.  
+- **Architecture/Design Topics**: Includes the **Authentication Service**, **Payment Processing Service**, and **Rewards Management System**, ensuring smooth functionality.  
+- **Testing Scenarios**: Focus on **User Registration**, **Make Payment**, and **Rewards Redemption**, validating core user-facing features.  
+- **Diagram**: The **System Context Diagram** highlights user interactions with the app and backend services.  
+
+#### **Merchants**  
+- **URD Section**: **Payment Processing (3.2)** and **Transaction History (3.3)** address merchant-specific needs.  
+- **SRS Section**: **Money Transfer (3.2)** expands on these needs, detailing APIs and features for merchant payments.  
+- **Architecture/Design Topics**: Includes the **Merchant Gateway** and **Transaction Database**, supporting merchant-specific operations.  
+- **Testing Scenarios**: Focuses on **Make Payment** and **Transaction History**, ensuring merchant transactions are accurate and seamless.  
+- **Diagram**: The **Container Diagram** shows how merchant interactions are routed through the system.  
+
+---
