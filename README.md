@@ -24,9 +24,9 @@
 
 ---
 
-# Google Pay Clone - Project Overview 💳📱
+# Google Pay - Project Overview 💳📱
 
-The **Google Pay Clone** project aims to create a digital payment platform that allows users to perform seamless financial transactions, manage their bank accounts, make payments, and access a variety of rewards and offers—all through a secure and user-friendly mobile application. This clone replicates the core features of Google Pay while implementing additional functionalities and ensuring robust security measures.
+The **Google Pay** project aims to create a digital payment platform that allows users to perform seamless financial transactions, manage their bank accounts, make payments, and access a variety of rewards and offers—all through a secure and user-friendly mobile application. This clone replicates the core features of Google Pay while implementing additional functionalities and ensuring robust security measures.
 
 ## Objective 🎯
 The primary objective of this project is to develop an application that facilitates:
