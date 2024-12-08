@@ -146,7 +146,7 @@ graph TD
 
 ## 4. Use Cases
 
-## 1. **User Use Case: Send Money**
+## 4.1 **User Use Case: Send Money**
 **Use Case ID**: UC-01  
 **Actor**: User  
 **Description**: A user sends money to another user or merchant.
@@ -165,7 +165,7 @@ graph TD
 
 ---
 
-## 2. **User Use Case: Pay Bill**
+## 4.2 **User Use Case: Pay Bill**
 **Use Case ID**: UC-02  
 **Actor**: User  
 **Description**: A user pays a utility bill via the app.
@@ -185,7 +185,7 @@ graph TD
 
 ---
 
-## 3. **Merchant Use Case: Process Payment**
+## 4.3 **Merchant Use Case: Process Payment**
 **Use Case ID**: UC-03  
 **Actor**: Merchant  
 **Description**: A merchant processes a payment from a customer.
@@ -205,7 +205,7 @@ graph TD
 
 ---
 
-## 4. **Admin Use Case: Manage Merchant Subscription**
+## 4.4 **Admin Use Case: Manage Merchant Subscription**
 **Use Case ID**: UC-04  
 **Actor**: Admin  
 **Description**: Admin manages merchant subscriptions and assigns Token IDs.
@@ -223,7 +223,7 @@ graph TD
 
 ---
 
-## 5. **System Use Case: Process Transaction**
+## 4.5 **System Use Case: Process Transaction**
 **Use Case ID**: UC-05  
 **Actor**: System  
 **Description**: The system processes the transaction, validates credentials, and updates histories.
@@ -236,7 +236,7 @@ graph TD
 
 ---
 
-## 6. **Payment Gateway Use Case: Process Transaction**
+## 4.6 **Payment Gateway Use Case: Process Transaction**
 **Use Case ID**: UC-06  
 **Actor**: Payment Gateway  
 **Description**: The payment gateway processes a transaction via external APIs.
@@ -248,7 +248,7 @@ graph TD
 
 ---
 ### Diagram:
-![Swim Lane Diagram](./Diagrams/swim_lane.png)
+![Swim Lane Diagram](./Diagrams/Swim_lane.png)
 
 ---
 ## 5. Non-Functional Requirements
