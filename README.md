@@ -1,4 +1,4 @@
-# 🚀 Google Pay Integration Documentation
+# 🚀 Google Pay Documentation
 
 **Team: Kernel Crypters Coders** 👩‍💻👨‍💻
 
@@ -33,7 +33,7 @@ This documentation provides developers with a comprehensive guide on integrating
 - **Real-Time Payment Status** ⏱️
 - **Transaction History and Logs** 📜
 
-The project focuses on providing seamless integration for efficient and secure payment processing.
+The focus of this documentation is to empower developers with the tools and knowledge needed for efficient, secure, and scalable payment processing using Google Pay.
 
 ---
 
@@ -52,7 +52,7 @@ The project focuses on providing seamless integration for efficient and secure p
 
 ## 💡 Project Goals
 
-The main goals for this integration are:
+The main goals of the Google Pay project are:
 
 - **Seamless User Experience**: Make the payment process frictionless and user-friendly. ✨
 - **Security**: Ensure safe and encrypted transactions via Google Pay. 🔒
