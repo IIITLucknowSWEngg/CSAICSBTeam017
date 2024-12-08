@@ -146,30 +146,111 @@ graph TD
 
 ## 4. Use Cases
 
-### Use Case 1: Individual Users
+## 4.1 **User Use Case: Send Money**
+**Use Case ID**: UC-01  
+**Actor**: User  
+**Description**: A user sends money to another user or merchant.
 
-| Use Case ID | UC-01 |
-|-------------|-------|
-| Name | Send Money |
-| Actors | User, System |
-| Description | A user sends money to another user using Google Pay. |
-| Preconditions | Both users have Google Pay accounts. |
-| Postconditions | Transaction is completed and both users receive notifications. |
-| Main Flow | 1. User initiates a transfer. <br>2. System verifies payment details. <br>3. System processes payment. <br>4. Both users are notified. |
-| Alternative Flows | A1: Insufficient balance. <br>A2: Invalid recipient details. |
+- **Login**: User logs in with OTP/Biometric and enters User ID and optional Token ID.
+- **Token ID Verification**: If Token ID is valid, user is redirected to Merchant Interface; otherwise, stays in User Interface.
+- **Action Selection**: User selects "Send Money" and enters recipient details.
+- **Payment Validation**: System validates recipient credentials and payment credentials.
+- **Transaction Processing**: User confirms the payment, and the system processes it.
+- **Transaction History**: The system updates the transaction history.
+- **Notification**: The system notifies the user of payment success.
 
-### Use Case 2: Merchants
+**Alternative Flows**:
+- **A1 (Invalid Recipient Details)**: If the recipient details are invalid, the system prompts the user to re-enter them.
+- **A2 (Insufficient Balance)**: If balance is insufficient, the system informs the user, and the transaction is not processed.
 
-| Use Case ID | UC-02 |
-|-------------|-------|
-| Name | Receive Payments |
-| Actors | Merchant, User, System |
-| Description | A merchant receives a payment from a customer using a QR code. |
-| Preconditions | Merchant is registered on Google Pay. |
-| Postconditions | Payment is processed and confirmed for both parties. |
-| Main Flow | 1. User scans merchant QR code. <br>2. User confirms payment. <br>3. System processes and notifies both parties. |
-| Alternative Flows | A1: Payment fails. <br>A2: Network error. |
+---
 
+## 4.2 **User Use Case: Pay Bill**
+**Use Case ID**: UC-02  
+**Actor**: User  
+**Description**: A user pays a utility bill via the app.
+
+- **Login**: User logs in with OTP/Biometric and enters Token ID (if applicable).
+- **Authentication**: System authenticates the user.
+- **Action Selection**: User selects "Pay Bill" option.
+- **Utility Provider Selection**: System fetches the list of available utility providers.
+- **Payment Validation**: System validates payment credentials.
+- **Bill Payment Processing**: System processes the bill payment via API.
+- **Transaction History**: The system updates the transaction history.
+- **Notification**: The system notifies the user of payment success.
+
+**Alternative Flows**:
+- **A1 (Unsupported Utility Provider)**: If the utility provider is unsupported, the system alerts the user and cancels the transaction.
+- **A2 (Payment Failure)**: If payment fails, the system informs the user and prompts retry.
+
+---
+
+## 4.3 **Merchant Use Case: Process Payment**
+**Use Case ID**: UC-03  
+**Actor**: Merchant  
+**Description**: A merchant processes a payment from a customer.
+
+- **Login**: Merchant logs in with User ID and Token ID.
+- **Token ID Verification**: If Token ID is valid, the system redirects to Merchant Interface; otherwise, stays in User Interface.
+- **Action Selection**: Merchant selects "Process Payment" option.
+- **QR Code Scanning**: Merchant scans customer QR code.
+- **Enter Payment Details**: Merchant enters the payment amount.
+- **Payment Confirmation**: Merchant confirms the payment.
+- **Transaction Notification**: System notifies the merchant of payment success.
+- **Transaction History**: System updates the transaction history for the merchant.
+
+**Alternative Flows**:
+- **A1 (Invalid QR Code)**: If the QR code is invalid, the system alerts the merchant to try again.
+- **A2 (Payment Failure)**: If payment fails (due to insufficient funds or error), the system notifies the merchant, and the transaction is not processed.
+
+---
+
+## 4.4 **Admin Use Case: Manage Merchant Subscription**
+**Use Case ID**: UC-04  
+**Actor**: Admin  
+**Description**: Admin manages merchant subscriptions and assigns Token IDs.
+
+- **Login**: Admin logs into the system using administrative credentials.
+- **Verify Merchant Application**: Admin verifies merchant applications for validity.
+- **Approve Merchant Subscription**: Admin approves the merchant subscription after verification.
+- **Assign Token ID**: Admin assigns a Token ID to the merchant for business access.
+- **Manage Data**: Admin manages user and merchant data in the system.
+- **Customer Support**: Admin resolves user issues via customer support channels.
+
+**Alternative Flows**:
+- **A1 (Incomplete Application)**: If merchant application is incomplete, admin requests additional details.
+- **A2 (Subscription Denial)**: If subscription is denied, the admin informs the merchant.
+
+---
+
+## 4.5 **System Use Case: Process Transaction**
+**Use Case ID**: UC-05  
+**Actor**: System  
+**Description**: The system processes the transaction, validates credentials, and updates histories.
+
+- **Authentication**: System verifies user credentials (OTP/Biometric).
+- **Payment Validation**: System validates payment details (recipient details, payment amount).
+- **Transaction Processing**: System communicates with the payment gateway to process the transaction.
+- **Send Notifications**: System sends payment success notifications to both user and merchant.
+- **Update Transaction History**: System updates transaction history for both user and merchant.
+
+---
+
+## 4.6 **Payment Gateway Use Case: Process Transaction**
+**Use Case ID**: UC-06  
+**Actor**: Payment Gateway  
+**Description**: The payment gateway processes a transaction via external APIs.
+
+- **Receive Payment Request**: System sends payment request to the payment gateway.
+- **Process Payment**: Payment gateway processes the payment via UPI or bank API.
+- **Transaction Status**: Payment gateway sends transaction status (success/failure) back to the system.
+- **Send Notification**: System notifies both user and merchant of the payment result.
+
+---
+### Diagram:
+![Swim Lane Diagram](./Diagrams/Swim_lane.png)
+
+---
 ## 5. Non-Functional Requirements
 
 ### 5.1 Performance Requirements
