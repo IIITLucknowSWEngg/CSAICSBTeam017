@@ -1,155 +1,236 @@
-# Software Requirements Specification (SRS) Document
+
+# Software Requirements Specification (SRS)
+## Google Pay v1.0
+
+<div align="center">
+
+![Version](https://img.shields.io/badge/Version-1.0-blue)
+![Status](https://img.shields.io/badge/Status-Draft-orange)
+![Date](https://img.shields.io/badge/Last%20Updated-December%202024-green)
+
+</div>
+
+## Table of Contents
+1. [Introduction](#1-introduction)
+2. [System Overview](#2-system-overview)
+3. [Functional Requirements](#3-functional-requirements)
+4. [Use Cases](#4-use-cases)
+5. [Non-Functional Requirements](#5-non-functional-requirements)
+6. [System Constraints](#6-system-constraints)
+7. [Appendix](#7-appendix)
 
 ## 1. Introduction
 
 ### 1.1 Purpose
-This Software Requirements Specification (SRS) document provides a detailed outline of the requirements for the Google Pay clone application. It includes functional and non-functional requirements, serving as a reference for developers, testers, and stakeholders throughout the software development lifecycle.
+Google Pay is designed to provide users with a seamless and secure payment platform. It enables users to make online and offline payments, transfer money, and manage their finances. This document defines the requirements for building and maintaining the platform.
 
-### 1.2 Scope
-The Google Pay clone application is a digital payment platform that allows users to make transactions, pay bills, and transfer money using their mobile devices. The system will handle user registration, payment transactions, balance management, and integration with various banking systems. This SRS document covers all aspects of the application, including user interfaces, functional and non-functional requirements, and external interface requirements.
+### 1.2 Project Scope
+Google Pay serves as a versatile platform for:
+- Instant money transfers
+- Bill payments
+- Mobile recharges
+- Merchant payments
+- Financial management tools
 
-### 1.3 Definitions, Acronyms, and Abbreviations
-- **SRS**: Software Requirements Specification  
-- **NFR**: Non-Functional Requirement  
-- **UI**: User Interface  
-- **API**: Application Programming Interface  
-- **NFC**: Near Field Communication  
-- **OTP**: One Time Password
+### 1.3 System Context
 
-### 1.4 References
-- IEEE Std 830-1998, IEEE Recommended Practice for Software Requirements Specifications
-- SWEBOK v3.0, Software Engineering Body of Knowledge
-- User Requirements Document
+```mermaid
+graph TB
+    A[Users] --> B[Google Pay Interface]
+    B --> C[Payment Gateway]
+    B --> D[Banking Systems]
+    B --> E[User Management System]
+    C --> F[Transaction Database]
+    D --> F
+    E --> F
+```
 
-### 1.5 Overview
-This document is organized into sections that describe the system overview, functional and non-functional requirements, and other considerations relevant to the development and implementation of the Google Pay clone application.
+## 2. System Overview
 
-## 2. Overall Description
+### 2.1 Core Components
 
-### 2.1 Product Perspective
-The Google Pay clone application is designed for mobile devices, with integration to external systems like banking APIs, payment gateways, and third-party services for SMS notifications. The system is modular to ensure scalability and adaptability to changing user needs and transaction volumes.
+```mermaid
+graph LR
+    A[Mobile App] --> B[Backend Services]
+    B --> C[Payment Gateway]
+    B --> D[Bank API Integration]
+    B --> E[Transaction Database]
+    B --> F[Fraud Detection System]
+```
 
-### 2.2 Product Functions
-- User registration and authentication.
-- Money transfer and bill payment services.
-- Bank account and card management.
-- Transaction history and notifications.
-- Balance tracking.
-- In-app support for customer queries.
+### 2.2 Key Features
 
-### 2.3 User Classes and Characteristics
-- **Customers**: Individuals who use the app to make payments, transfer money, or pay bills.
-- **Merchants**: Businesses who use the app to receive payments.
-- **Admins**: Individuals who manage the platform, ensuring security, reliability, and resolving customer issues.
+1. **Payment Services**
+   - Peer-to-peer transfers
+   - Merchant payments via QR codes
+   - NFC-based transactions
 
-### 2.4 Operating Environment
-The application will operate on Android and iOS mobile platforms. The backend will be hosted on cloud infrastructure, offering high availability. It will require internet connectivity for payment processing, bank integration, and balance updates.
+2. **Financial Management**
+   - Expense tracking
+   - Saving goals
+   - Transaction history
 
-### 2.5 Design and Implementation Constraints
-- Must comply with financial regulations (e.g., PCI-DSS, GDPR).
-- The app is limited by the performance and capabilities of mobile devices.
-- Dependence on third-party banking systems and payment gateways for transaction processing.
+3. **Security Features**
+   - Multi-factor authentication
+   - Fraud detection and prevention
+   - Tokenization for secure card storage
 
-### 2.6 Assumptions and Dependencies
-- Users have access to smartphones with a stable internet connection.
-- Integration with banks and third-party APIs will be reliable and secure.
-- The application will initially support a limited number of currencies and regions.
+4. **Customer Support**
+   - 24/7 help desk
+   - In-app chat support
+   - Dispute resolution
 
-## 3. System Features
+## 3. Functional Requirements
 
-### 3.1 User Registration and Authentication
-**Description:** Users can register with their mobile numbers or email addresses. Secure login and authentication with OTP and biometric verification will be supported.
+### 3.1 User Authentication & Authorization
 
-**Functional Requirements:**
-- The system shall allow users to register with mobile numbers or email addresses.
-- The system shall send an OTP for account verification during registration.
-- The system shall support biometric login (fingerprint, face ID) for enhanced security.
+```mermaid
+sequenceDiagram
+    User->>App: Login Request
+    App->>Auth Service: Validate Credentials
+    Auth Service->>Database: Verify User
+    Database->>Auth Service: User Data
+    Auth Service->>App: Auth Token
+    App->>User: Access Granted
+```
 
-### 3.2 Money Transfer
-**Description:** Users can transfer money to other users or merchants. The system will handle bank integration and provide real-time transaction updates.
+#### Detailed Requirements:
+1. **Registration Process**
+   - Phone number and email verification
+   - Biometric authentication setup (optional)
+   - Integration with Google Account
 
-**Functional Requirements:**
-- The system shall allow users to transfer money to any registered user or merchant.
-- The system shall notify users and merchants about the transaction status.
-- The system shall maintain transaction history for users.
+2. **Authentication Features**
+   - OTP-based login
+   - Biometric login (fingerprint/face recognition)
+   - Session expiration after inactivity
 
-### 3.3 Bill Payment
-**Description:** Users can pay utility bills (e.g., electricity, phone, water) through the application.
+### 3.2 Payment Process
 
-**Functional Requirements:**
-- The system shall provide a list of supported utility providers for bill payment.
-- The system shall allow users to schedule recurring bill payments.
-- The system shall send a confirmation once the bill is paid successfully.
+```mermaid
+stateDiagram-v2
+    [*] --> Initiated
+    Initiated --> Processing: User Confirms Payment
+    Processing --> Successful: Transaction Authorized
+    Processing --> Failed: Insufficient Funds
+```
 
-### 3.4 Payment Methods
-**Description:** The system supports various payment methods, including bank transfers, credit/debit cards, and in-app wallets.
+#### Payment Requirements:
+1. **Transaction Flow**
+   - Initiation by user (peer-to-peer or merchant)
+   - Secure tokenization of payment details
+   - Authorization through PIN/biometrics
 
-**Functional Requirements:**
-- The system shall allow users to link their bank accounts and cards.
-- The system shall support NFC for contactless payments.
-- The system shall process payments using multiple methods (credit card, bank transfer, wallet).
+2. **Notifications**
+   - Real-time notifications for successful/failed transactions
+   - Monthly spending reports
 
-## 4. External Interface Requirements
+### 3.3 Financial Tools
 
-### 4.1 User Interfaces
-- **Mobile Application:** The UI shall be user-friendly and intuitive, ensuring smooth navigation and access to essential functionalities across different screen sizes.
-- **Admin Panel:** A web-based admin panel to manage users, transactions, and customer support queries.
+```mermaid
+graph TD
+    A[Expense Input] --> B[Categorization]
+    B --> C[Analytics Engine]
+    C --> D[Expense Report]
+    C --> E[Recommendations]
+```
 
-### 4.2 Hardware Interfaces
-- **NFC Module:** For contactless payment support.
-- **Mobile Camera:** For scanning QR codes.
-- **Fingerprint/Face ID:** For biometric authentication.
+#### Requirements:
+1. **Expense Categorization**
+   - Automatic classification based on transaction metadata
+   - User-defined categories
 
-### 4.3 Software Interfaces
-- **Third-Party APIs:** Integration with banking APIs, payment gateways, and SMS notification services.
-- **Database:** The system shall use a relational or NoSQL database for storing transaction records and user data.
+2. **Insights and Reports**
+   - Monthly/annual spending trends
+   - Personalized financial advice
 
-### 4.4 Communication Interfaces
-- All communication between the app and backend will be over secure HTTPS protocols, ensuring data encryption and integrity.
-- Real-time notifications will be delivered using WebSocket or Firebase Cloud Messaging (FCM).
+## 4. Use Cases
 
-## 5. Non-Functional Requirements (NFRs)
+### Use Case 1: Individual Users
+
+| Use Case ID | UC-01 |
+|-------------|-------|
+| Name | Send Money |
+| Actors | User, System |
+| Description | A user sends money to another user using Google Pay. |
+| Preconditions | Both users have Google Pay accounts. |
+| Postconditions | Transaction is completed and both users receive notifications. |
+| Main Flow | 1. User initiates a transfer. <br>2. System verifies payment details. <br>3. System processes payment. <br>4. Both users are notified. |
+| Alternative Flows | A1: Insufficient balance. <br>A2: Invalid recipient details. |
+
+### Use Case 2: Merchants
+
+| Use Case ID | UC-02 |
+|-------------|-------|
+| Name | Receive Payments |
+| Actors | Merchant, User, System |
+| Description | A merchant receives a payment from a customer using a QR code. |
+| Preconditions | Merchant is registered on Google Pay. |
+| Postconditions | Payment is processed and confirmed for both parties. |
+| Main Flow | 1. User scans merchant QR code. <br>2. User confirms payment. <br>3. System processes and notifies both parties. |
+| Alternative Flows | A1: Payment fails. <br>A2: Network error. |
+
+## 5. Non-Functional Requirements
 
 ### 5.1 Performance Requirements
-- The application shall load within 2 seconds under normal network conditions.
-- Transactions shall be processed within 5 seconds.
-- The system shall support up to 50,000 concurrent users without performance degradation.
+
+| Metric | Normal Load | Peak Load |
+|--------|-------------|-----------|
+| Transaction Processing Time | < 2 seconds | < 5 seconds |
+| Concurrent Users | 10,000 | 50,000 |
+| API Response Time | < 300ms | < 1 second |
 
 ### 5.2 Security Requirements
-- User data shall be encrypted at rest and in transit.
-- The system shall implement multi-factor authentication (OTP + biometric).
-- Regular security audits and penetration testing shall be conducted to identify vulnerabilities.
 
-### 5.3 Availability and Reliability
-- The system shall maintain 99.9% uptime, minimizing downtime for maintenance.
-- A failover mechanism shall be in place to ensure transaction integrity in case of server failures.
-- Daily backups shall be taken and stored in multiple locations.
+1. **Data Protection**
+   - Encryption for all sensitive data
+   - Compliance with PCI DSS standards
 
-### 5.4 Scalability
-- The system shall support horizontal scaling to handle increased transaction volumes.
-- The application architecture shall be flexible to accommodate new features and services.
-- Database indexing shall be optimized to handle large transaction records.
+2. **System Security**
+   - Regular penetration testing
+   - Fraud detection and prevention mechanisms
 
-### 5.5 Usability
-- The application shall follow WCAG 2.1 guidelines to ensure accessibility for users with disabilities.
-- The app shall be designed for ease of use, with minimal steps required to complete a transaction.
-- User feedback mechanisms shall be incorporated to improve the app experience.
+### 5.3 Reliability Requirements
 
-### 5.6 Maintainability
-- The codebase shall be modular, supporting easy maintenance and upgrades.
-- Comprehensive documentation for APIs, modules, and database schemas shall be maintained.
-- Automated testing shall be employed to ensure updates do not introduce new bugs.
+1. **Availability**
+   - 99.95% uptime
+   - Automated failover systems
 
-### 5.7 Compliance
-- The system shall comply with PCI-DSS standards for payment processing.
-- It shall adhere to GDPR for data privacy and user consent.
-- Users shall be able to request data export and deletion as per compliance requirements.
+2. **Error Handling**
+   - Comprehensive logging
+   - User-friendly error messages
 
-## 6. Other Requirements
-- **Localization**: The application shall support localization for multiple languages and currencies.
-- **Ethical Requirements**: The application shall include a reporting mechanism to prevent fraudulent activities or misuse.
+## 6. System Constraints
 
-## 7. Appendices
-- **Appendix A**: Glossary of Terms
-- **Appendix B**: System Architecture Diagrams
-- **Appendix C**: Detailed Requirements Matrix
+### 6.1 Technical Constraints
+1. **Infrastructure**
+   - Cloud-based hosting on Google Cloud Platform
+   - Use of Kubernetes for container orchestration
+
+2. **Development**
+   - Frontend: Flutter
+   - Backend: Node.js/Express
+   - Database: Firebase Firestore
+
+### 6.2 Business Constraints
+1. **Timeline**
+   - MVP: 6 months
+   - Full release: 1 year
+
+2. **Budget**
+   - Initial development: $2M
+   - Maintenance: $500K/year
+
+## 7. Appendix
+
+### 7.1 Terminology
+
+| Term | Definition |
+|------|------------|
+| NFC | Near-Field Communication |
+| OTP | One-Time Password |
+| Tokenization | Process of substituting sensitive data with unique identifiers |
+
+---
+
+
