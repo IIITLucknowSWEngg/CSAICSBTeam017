@@ -62,7 +62,7 @@ The primary objective of this project is to develop an application that facilita
 - **Consumers** 🧑‍💻: Individuals looking for a convenient and secure way to send and receive money, pay bills, and manage their finances digitally.
 - **Merchants** 🛍️: Small and medium businesses that wish to accept payments digitally through QR codes, NFC, or UPI.
 - **Admins** 👨‍💻: Admins will manage user accounts, monitor transaction logs, and handle compliance-related tasks to ensure the smooth operation of the system.
-- 
+  
 ## Challenges Addressed 🚧
 1. **Secure Financial Transactions** 🛡️: The project implements multiple layers of security to ensure safe payments and sensitive data protection.
 2. **Real-Time Transactions** ⏱️: Ensuring that money transfers and bill payments are processed in real-time, with instant feedback to users.
