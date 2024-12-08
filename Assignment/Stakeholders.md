@@ -23,40 +23,51 @@ Stakeholders are grouped into the following categories:
 
 ## 3. Stakeholder Profiles
 
-### 3.1 Documentation Team Stakeholders
+### 3.1 Documentation Team Stakeholders  
 
 | **Stakeholder**          | **Role**                     | **Responsibilities**                              | **Impact**                              | **Qualifications**                               |
 |--------------------------|------------------------------|--------------------------------------------------|------------------------------------------|-------------------------------------------------|
-| Project Lead             | Documentation Strategist     | - Define goals and scope of the documentation.    | Ensure comprehensive and high-quality output. | Expert in documentation frameworks and payment systems. |
-| Technical Writers        | Content Creators             | - Develop user guides, FAQs, and API references.   | Provide clear and precise information.  | Skilled in technical writing and financial systems. |
+| Project Lead             | Documentation Strategist     | - Define goals and scope of the documentation.    | Ensure comprehensive and high-quality output. | Expert in documentation frameworks and Google Pay systems. |
+| Technical Writers        | Content Creators             | - Author integration guides and API references.   | Provide clear and precise instructions.  | Skilled in technical writing and API documentation. |
 | Designers                | Visual Guide Developers      | - Create visuals, diagrams, and layouts.          | Enhance the usability and engagement of the documentation. | Proficient in design tools and technical illustration. |
-| Review Team              | Quality and Compliance Auditors | - Review content for accuracy, clarity, and compliance. | Ensure high standards and error-free documentation. | Experts in technical editing and compliance standards. |
+| Review Team              | Quality and Compliance Auditors | - Review content for accuracy, clarity, and compliance. | Ensure high standards and error-free documentation. | Experts in technical editing and payment system regulations. |
+| Localization Specialists | Translators and Cultural Experts | - Translate documentation into multiple languages. | Broaden accessibility across different regions. | Fluent in multiple languages with technical translation expertise. |
+| Technical SMEs           | Subject Matter Experts       | - Provide insights into complex technical concepts. | Enhance technical accuracy and depth of content. | Specialists in Google Pay architecture and APIs. |
 
 ---
 
-### 3.2 Product Stakeholders
+### 3.2 Product Stakeholders  
 
 | **Stakeholder**         | **Role**                       | **Responsibilities**                                | **Impact**                              | **Qualifications**                               |
 |-------------------------|---------------------------------|----------------------------------------------------|------------------------------------------|-------------------------------------------------|
-| Application Developers  | Documentation Users            | - Use documentation for utilizing Google Pay features.    | Drive the effectiveness of implementation processes. | Proficient in backend development and APIs. |
+| Application Developers  | Documentation Users            | - Use documentation for integrating Google Pay.    | Drive the effectiveness of the integration process. | Proficient in backend development and API usage. |
 | Business Owners         | Decision Makers                | - Leverage Google Pay for customer transactions.   | Expand payment options and business growth. | Knowledgeable in e-commerce or app-based services. |
+| QA Engineers            | Integration Testers            | - Validate the integration process with test cases. | Identify and report potential bugs or inconsistencies. | Skilled in testing frameworks and payment systems. |
+| Marketing Teams         | Adoption Drivers               | - Promote the benefits of Google Pay integration.  | Drive developer engagement and usage.    | Experts in digital marketing strategies and technical communication. |
 
 ---
 
-### 3.3 External Stakeholders
+### 3.3 External Stakeholders  
 
 | **Stakeholder**         | **Role**                       | **Responsibilities**                                | **Impact**                              | **Qualifications**                               |
 |-------------------------|---------------------------------|----------------------------------------------------|------------------------------------------|-------------------------------------------------|
-| Google Pay API Team     | Technology Providers           | - Provide specifications and updates.              | Ensure compatibility and feature richness. | Experts in API design and Google Pay architecture. |
-| Strategic Partners      | External Support Providers     | - Offer tools and collaborations for Google Pay.   | Facilitate advanced use cases.  | Vendors with experience in payment systems. |
+| Google Pay API Team     | Technology Providers           | - Provide API specifications and updates.          | Ensure compatibility and feature richness. | Experts in API design and Google Pay architecture. |
+| Integration Partners    | Technical Support Providers    | - Offer third-party tools and support services.    | Facilitate developers with advanced tools.  | Vendors with experience in payment processing. |
+| User Accounts           | End Users                      | - Create accounts for using Google Pay services.   | Enable authentication and user-specific features. | Individuals with basic technical know-how. |
+| Login Systems           | Authentication Providers       | - Securely handle login and session management.    | Ensure user security and privacy during interactions. | Expertise in secure authentication protocols. |
+| Payment Gateways        | Transaction Processors         | - Facilitate the processing of payments.           | Ensure smooth and secure transactions.   | Experts in payment gateway implementation and security. |
+| Partner Organizations   | Collaborative Innovators       | - Work with Google to expand integration use cases. | Enhance features and adoption through partnerships. | Experienced in fintech and technical collaboration. |
 
 ---
 
-### 3.4 Regulatory Stakeholders
+
+### 3.4 Regulatory Stakeholders  
 
 | **Stakeholder**         | **Role**                       | **Responsibilities**                                | **Impact**                              | **Qualifications**                               |
 |-------------------------|---------------------------------|----------------------------------------------------|------------------------------------------|-------------------------------------------------|
 | Compliance Authorities  | Legal Advisors                 | - Ensure the documentation adheres to legal and regulatory standards (e.g., PCI DSS). | Safeguard user privacy and data security. | Legal and compliance experts in fintech. |
+| Data Protection Agencies| Privacy Advocates              | - Monitor adherence to data privacy regulations.   | Maintain user trust and comply with laws. | Specialists in GDPR, CCPA, or equivalent regulations. |
+| Standardization Bodies  | Industry Regulators            | - Define standards for payment integrations.       | Ensure interoperability and quality.     | Experts in ISO standards for fintech and APIs. |
 
 ---
 
