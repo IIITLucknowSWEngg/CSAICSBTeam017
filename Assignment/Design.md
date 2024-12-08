@@ -1,12 +1,5 @@
 # GPay: Software Design Document
 
-**Author(s):**  
-**Lab Section:**  
-**Workstation:**  
-**Date:** mm/dd/yyyy  
-
----
-
 ## Table of Contents
 1. [Introduction](#1-introduction)  
    1.1 [Purpose](#11-purpose)  
@@ -64,7 +57,7 @@ GPay is a mobile and web application that facilitates digital transactions, user
 
 ### 3.1 Architectural Design
 
-![alt text](Diagrams/Design/image.png)
+![alt text](image.png)
 
 GPay uses a microservices-based architecture with the following subsystems:  
 - **Authentication Service**: Manages user login and session management.  
@@ -129,7 +122,18 @@ Users can log in, initiate payments, view transaction history, and receive notif
 
 ### 6.2 Screen Images
 - **Login Page:** Includes fields for username and password, and a login button.  
+
 - **Home Page:** Displays a list of transactions and payment options.
+![alt text](<WhatsApp Image 2024-12-08 at 13.47.46.jpeg>)
+
+- **Profile Page:** Displays all Profile options
+![alt text](<WhatsApp Image 2024-12-08 at 13.47.47.jpeg>)
+
+- **User to User Transaction Page:** Displays all User to User Transactions
+![alt text](<WhatsApp Image 2024-12-08 at 13.47.46 (2).jpeg>)
+
+- **Money Management:**
+![alt text](<WhatsApp Image 2024-12-08 at 13.47.46 (1).jpeg>)
 
 ### 6.3 Screen Objects and Actions
 | **Screen Object**  | **Action**                  |  
@@ -154,4 +158,7 @@ Users can log in, initiate payments, view transaction history, and receive notif
 - API specifications.  
 - Database schema.  
 
-
+## 9 . References
+- SWEBOK: [Software Engineering Body of Knowledge](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4)
+- SDD Template: [SDD Template](https://wildart.github.io/MISG5020/standards/SDD_Template.pdf)
+- IEEE 1016: [IEEE Standard for Information Technology](https://standards.ieee.org/ieee/1016/4502/)
