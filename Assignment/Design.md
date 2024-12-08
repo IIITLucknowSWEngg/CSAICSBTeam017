@@ -1,12 +1,5 @@
 # GPay: Software Design Document
 
-**Author(s):**  
-**Lab Section:**  
-**Workstation:**  
-**Date:** mm/dd/yyyy  
-
----
-
 ## Table of Contents
 1. [Introduction](#1-introduction)  
    1.1 [Purpose](#11-purpose)  
