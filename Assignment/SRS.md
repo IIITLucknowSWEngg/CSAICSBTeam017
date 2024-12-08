@@ -200,6 +200,31 @@ graph TD
    - Comprehensive logging
    - User-friendly error messages
 
+### 5.4 Usability Requirements
+
+1. **User Interface Design**
+   - Intuitive and easy-to-use mobile app interface.
+   - Support for multiple languages and accessibility features.
+
+2. **User Training**
+   - In-app tutorials for new users.
+   - Context-sensitive help and tips.
+
+3. **Support Channels**
+   - 24/7 support with minimal wait times.
+   - Multiple support channels: chat, email, and phone.
+
+### 5.5 Scalability Requirements
+
+1. **Vertical Scaling**
+   - Dynamic resource allocation to handle traffic spikes.
+
+2. **Horizontal Scaling**
+   - Load balancing for distributed servers to support a growing user base.
+
+3. **Data Scalability**
+   - Efficient database sharding to manage large volumes of transactions and user data.
+
 ## 6. System Constraints
 
 ### 6.1 Technical Constraints
@@ -232,5 +257,3 @@ graph TD
 | Tokenization | Process of substituting sensitive data with unique identifiers |
 
 ---
-
-
