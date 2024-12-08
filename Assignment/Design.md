@@ -20,8 +20,8 @@
    6.1 [Overview of User Interface](#61-overview-of-user-interface)  
    6.2 [Screen Images](#62-screen-images)  
    6.3 [Screen Objects and Actions](#63-screen-objects-and-actions)  
-7. [Requirements Matrix](#7-requirements-matrix)  
-8. [Appendices](#8-appendices)  
+7. [Appendices](#7-appendices)  
+8. [References](#8-references)  
 
 ---
 
@@ -141,22 +141,14 @@ Users can log in, initiate payments, view transaction history, and receive notif
 
 ---
 
-## 7. Requirements Matrix
 
-| **Requirement ID** | **Component**              |  
-|---------------------|----------------------------|  
-| R-01               | Authentication Service     |  
-| R-02               | Transaction Service        |  
-
----
-
-## 8. Appendices
+## 7. Appendices
 
 - Detailed user flow diagrams.  
 - API specifications.  
 - Database schema.  
 
-## 9 . References
+## 8 . References
 - SWEBOK: [Software Engineering Body of Knowledge](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4)
 - SDD Template: [SDD Template](https://wildart.github.io/MISG5020/standards/SDD_Template.pdf)
 - IEEE 1016: [IEEE Standard for Information Technology](https://standards.ieee.org/ieee/1016/4502/)
