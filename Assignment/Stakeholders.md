@@ -1,5 +1,5 @@
 
-# Google Pay Documentation Stakeholder Management Strategy
+# Stakeholder Management Strategy
 
 ---
 
