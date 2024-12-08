@@ -57,7 +57,7 @@ GPay is a mobile and web application that facilitates digital transactions, user
 
 ### 3.1 Architectural Design
 
-![alt text](image.png)
+![alt text](Diagrams/Design/a5.png)
 
 GPay uses a microservices-based architecture with the following subsystems:  
 - **Authentication Service**: Manages user login and session management.  
@@ -124,16 +124,16 @@ Users can log in, initiate payments, view transaction history, and receive notif
 - **Login Page:** Includes fields for username and password, and a login button.  
 
 - **Home Page:** Displays a list of transactions and payment options.
-![alt text](<WhatsApp Image 2024-12-08 at 13.47.46.jpeg>)
+![alt text](Diagrams/Design/a4.png)
 
 - **Profile Page:** Displays all Profile options
-![alt text](<WhatsApp Image 2024-12-08 at 13.47.47.jpeg>)
+![alt text](Diagrams/Design/a1.png)
 
 - **User to User Transaction Page:** Displays all User to User Transactions
-![alt text](<WhatsApp Image 2024-12-08 at 13.47.46 (2).jpeg>)
+![alt text](Diagrams/Design/a3.png)
 
 - **Money Management:**
-![alt text](<WhatsApp Image 2024-12-08 at 13.47.46 (1).jpeg>)
+![alt text](Diagrams/Design/a2.png)
 
 ### 6.3 Screen Objects and Actions
 | **Screen Object**  | **Action**                  |  
