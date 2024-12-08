@@ -47,7 +47,7 @@ Stakeholders are grouped into the following categories:
 
 ---
 
-### 3.3 External Stakeholders  
+<!-- ### 3.3 External Stakeholders  
 
 | **Stakeholder**         | **Role**                       | **Responsibilities**                                | **Impact**                              | **Qualifications**                               |
 |-------------------------|---------------------------------|----------------------------------------------------|------------------------------------------|-------------------------------------------------|
@@ -58,7 +58,16 @@ Stakeholders are grouped into the following categories:
 | Payment Gateways        | Transaction Processors         | - Facilitate the processing of payments.           | Ensure smooth and secure transactions.   | Experts in payment gateway implementation and security. |
 | Partner Organizations   | Collaborative Innovators       | - Work with Google to expand integration use cases. | Enhance features and adoption through partnerships. | Experienced in fintech and technical collaboration. |
 
----
+--- -->
+### 3.3 External Stakeholders  
+
+| **Stakeholder**         | **Purpose**                                                    | **Login Method**                                              | **Examples**                                             |
+|-------------------------|--------------------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------|
+| GPay Users (End Users)  | To access their Google Pay accounts for making payments, viewing transaction history, and managing linked bank accounts or cards. | Through their Google account or linked credentials.         | - Individuals using Google Pay for personal payments.  <br> - Customers making purchases in stores or online. |
+| Merchants (Business Owners) | To manage transactions, track customer payments, and reconcile accounts. | Through a merchant account tied to their Google Pay Merchant Center. | - Store owners using Google Pay for receiving payments. <br> - E-commerce businesses using Google Pay integration. |
+| Support and Technical Teams | To provide customer support, resolve issues, or assist with merchant and user onboarding. | Through dedicated Google accounts with appropriate permissions. | - Payment gateway technical support teams. <br> - Customer service representatives assisting users and businesses. |
+| Banks (Financial Institutions and Payment Service Providers) | To enable account linking, process transactions, and provide financial services. | Through secure institutional credentials or integrated systems. | - Partner banks offering Google Pay as a payment method. <br> - Payment service providers supporting backend processing. |
+
 
 
 ### 3.4 Regulatory Stakeholders  
