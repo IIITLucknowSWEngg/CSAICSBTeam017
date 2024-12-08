@@ -1,182 +1,143 @@
-# User Requirements Document (URD) for Google Pay
+# User Requirements Document (URD) for Google Pay Project
 
 ## Table of Contents
-1. **Introduction**
-   - 1.1 Purpose
-   - 1.2 Scope
-   - 1.3 Definitions, Acronyms, and Abbreviations
-   - 1.4 References
-   - 1.5 Overview
 
-2. **General Description**
-   - 2.1 Product Perspective
-   - 2.2 Product Functions
-   - 2.3 User Characteristics
-   - 2.4 Constraints
-   - 2.5 Assumptions and Dependencies
-
-3. **Functional Requirements**
-   - 3.1 User Registration and Authentication
-   - 3.2 Payment Processing
-   - 3.3 Transaction History and Notifications
-   - 3.4 Rewards and Offers
-   - 3.5 Security and Privacy
-   - 3.6 Customer Support
-
-4. **Non-functional Requirements**
-   - 4.1 Performance
-   - 4.2 Reliability
-   - 4.3 Usability
-   - 4.4 Portability
-   - 4.5 Security
-
-5. **User Scenarios and Use Cases**
-   - 5.1 Use Case 1: User Registration
-   - 5.2 Use Case 2: Sending Money
-   - 5.3 Use Case 3: Receiving Money
-   - 5.4 Use Case 4: Viewing Transaction History
-   - 5.5 Use Case 5: Accessing Rewards and Offers
-   - 5.6 Use Case 6: Contacting Customer Support
-
-6. **Appendices**
-   - A. Glossary
-   - B. Data Flow Diagrams
-   - C. User Interface Mockups
-   - D. Additional Notes
+- [Introduction](#introduction)
+- [Stakeholder Requirements](#stakeholder-requirements)
+  - [Project Team](#project-team)
+  - [Product Stakeholders](#product-stakeholders)
+  - [External Stakeholders](#external-stakeholders)
+  - [Regulatory Stakeholders](#regulatory-stakeholders)
+- [Production Login Users](#production-login-users)
+  - [Ravi Mehta](#ravi-mehta)
+  - [Anita Sharma](#anita-sharma)
+  - [Ramesh Nair](#ramesh-nair)
+  - [Pooja Singh](#pooja-singh)
 
 ---
 
-## 1. Introduction
-### 1.1 Purpose
-The purpose of this document is to define the user requirements for Google Pay, a digital payment application designed for secure and convenient monetary transactions. This URD will serve as the foundation for subsequent stages in the development lifecycle.
+## Introduction
 
-### 1.2 Scope
-This document covers all user-facing functionalities of Google Pay, including money transfers, payment processing, transaction history, rewards, and customer support.
+This document defines the user requirements for the Google Pay project. It outlines the expectations and needs of all key stakeholders, including the project team, product stakeholders, external stakeholders, and regulatory stakeholders. Additionally, specific user requirements are provided for individual production login users.
 
-### 1.3 Definitions, Acronyms, and Abbreviations
-- **OTP**: One-Time Password
-- **UPI**: Unified Payment Interface
-- **KYC**: Know Your Customer
+---
 
-### 1.4 References
-- PCI DSS: Security standards for handling cardholder information. [PCI Security Standards](https://www.pcisecuritystandards.org/)
-- NPCI UPI Guidelines: Requirements for UPI-based payment systems in India. [NPCI](https://www.npci.org.in/)
-- GDPR: Data protection regulations applicable globally. [GDPR Info](https://gdpr-info.eu/)
-- RBI Digital Payment Regulations: Rules on digital payments in India. [RBI](https://www.rbi.org.in/)
-- ISO/IEC 27001: Information security management standards. [ISO](https://www.iso.org/isoiec-27001-information-security.html)
-- Google Pay API Documentation: Guides for Google Pay integration. Google Pay Developers.[Google Pay Developers](https://developers.google.com/pay/)
+## Stakeholder Requirements
 
-### 1.5 Overview
-This document includes functional and non-functional requirements that reflect the expectations of end-users, encompassing usability, security, and performance considerations.
+### Project Team
 
-## 2. General Description
-### 2.1 Product Perspective
-Google Pay is a digital wallet platform and online payment system developed by Google. It aims to provide users with a secure and fast method for making payments and transferring funds.
+- *Development Team*
+  - *Requirements*:
+    - A secure and scalable backend to handle high transaction volumes.
+    - Integration with major banks and financial institutions for seamless transactions.
+    - Real-time monitoring tools to identify and address system issues.
+    - Cross-platform support for Android, iOS, and web applications.
 
-### 2.2 Product Functions
-- User registration and login with phone number verification
-- Linking bank accounts and managing payment methods
-- Sending and receiving money
-- Viewing transaction history
-- Accessing exclusive offers and rewards
-- Providing customer support and FAQs
+- *Project Manager*
+  - *Requirements*:
+    - Efficient project tracking tools to monitor development progress.
+    - Regular updates from development and design teams.
+    - Clear documentation of all system requirements and functionalities.
+    - A risk management plan to handle potential roadblocks.
 
-### 2.3 User Characteristics
-Primary users are smartphone users familiar with digital payment systems. They include general consumers, small business owners, and merchants.
+---
 
-### 2.4 Constraints
-- Compliance with financial regulations and data protection laws
-- Support for multiple languages and currencies
-- Compatibility with various banking systems and networks
+### Product Stakeholders
 
-### 2.5 Assumptions and Dependencies
-- Users have internet access
-- Users have bank accounts that support UPI transactions
+- *Merchants*
+  - *Requirements*:
+    - Easy integration of Google Pay into existing point-of-sale systems.
+    - Detailed analytics to track transaction history and customer trends.
+    - Instant settlement of funds to merchant accounts.
+    - Customer support for resolving payment-related issues.
 
-## 3. Functional Requirements
-### 3.1 User Registration and Authentication
-- Users can register with their mobile number.
-- Users receive an OTP for verification.
-- Users can set a PIN or biometric authentication for security.
+- *End Users*
+  - *Requirements*:
+    - A fast and intuitive user interface for making payments.
+    - Multiple payment options, including UPI, credit/debit cards, and wallets.
+    - Secure transactions with robust fraud detection mechanisms.
+    - Personalized offers and rewards for using the platform.
 
-### 3.2 Payment Processing
-- Users can link and verify their bank accounts.
-- Users can send and receive money through UPI.
-- Users can pay for goods and services through QR codes or NFC.
+---
 
-### 3.3 Transaction History and Notifications
-- Users can view their transaction history with detailed information.
-- Users receive notifications for all transactions and important updates.
+### External Stakeholders
 
-### 3.4 Rewards and Offers
-- Users can view and redeem offers from participating merchants.
-- Users receive cashback rewards for qualifying transactions.
+- *Banks and Financial Institutions*
+  - *Requirements*:
+    - Integration with their existing systems for UPI and card transactions.
+    - Compliance with regulatory requirements for financial data security.
+    - Regular performance reports on transaction volumes and trends.
+    - Support for troubleshooting issues related to payment processing.
 
-### 3.5 Security and Privacy
-- The application uses end-to-end encryption for all transactions.
-- User data is stored securely and complies with data protection regulations.
-- The app offers additional fraud detection measures.
+- *Advertisers*
+  - *Requirements*:
+    - Targeted advertising opportunities based on user purchase patterns.
+    - Insights into campaign performance and user engagement metrics.
+    - Flexible ad formats suitable for in-app promotions.
+    - Assurance of data privacy compliance while utilizing user analytics.
 
-### 3.6 Customer Support
-- Users can contact customer support through chat or email.
-- Users can access a comprehensive FAQ section for self-help.
+---
 
-## 4. Non-functional Requirements
-### 4.1 Performance
-- The app should process transactions in under 3 seconds.
-- The system should handle peak loads with minimal delays.
+### Regulatory Stakeholders
 
-### 4.2 Reliability
-- The app should maintain 99.9% uptime.
-- Transaction history should be reliably updated in real-time.
+- *Data Privacy and Security Authorities*
+  - *Requirements*:
+    - Full compliance with data protection laws (e.g., GDPR, CCPA).
+    - Regular audits to ensure adherence to security standards.
+    - Transparent user consent mechanisms for data collection and usage.
+    - Prompt reporting of data breaches and mitigation plans.
 
-### 4.3 Usability
-- The app should be easy to navigate with a clean, intuitive interface.
-- The app should be accessible for users with disabilities.
+- *Financial Regulators*
+  - *Requirements*:
+    - Compliance with payment processing regulations in different regions.
+    - Adherence to anti-money laundering (AML) and know-your-customer (KYC) norms.
+    - Regular reporting on financial transactions and system reliability.
+    - Collaboration for implementing updates in regulatory frameworks.
 
-### 4.4 Portability
-- The app should be compatible with Android and iOS devices.
-- The app should be adaptable to different screen sizes and resolutions.
+---
 
-### 4.5 Security
-- The app should comply with PCI DSS standards.
-- User sessions should time out after a period of inactivity.
+## Production Login Users
 
-## 5. User Scenarios and Use Cases
-### 5.1 Use Case 1: User Registration
-**Actors:** User, Google Pay System  
-**Description:** A user registers by providing a mobile number and verifying it with an OTP. The user then sets up a PIN or biometric authentication.
+### Ravi Mehta (Small Business Owner)
 
-### 5.2 Use Case 2: Sending Money
-**Actors:** User, Google Pay System  
-**Description:** A user selects a contact or enters a UPI ID, specifies an amount, and confirms the transaction with their PIN or biometric authentication.
+- *User Requirements*:
+  - *User Experience*: I need a simple interface to accept payments from my customers, both online and offline.
+  - *Transaction Insights*: I want detailed reports on daily and monthly transactions.
+  - *Security*: I need robust security to ensure all payments are safe and reliable.
+  - *Rewards*: I would appreciate cashback or rewards for frequent use of Google Pay for my business.
 
-### 5.3 Use Case 3: Receiving Money
-**Actors:** User, Sender  
-**Description:** A user provides their UPI ID or mobile number to the sender, who then transfers funds.
+---
 
-### 5.4 Use Case 4: Viewing Transaction History
-**Actors:** User  
-**Description:** A user navigates to the transaction history page to view details of past transactions.
+### Anita Sharma (Frequent Online Shopper)
 
-### 5.5 Use Case 5: Accessing Rewards and Offers
-**Actors:** User  
-**Description:** A user navigates to the rewards section to view available offers and redeem cashback rewards.
+- *User Requirements*:
+  - *Ease of Use*: I need a fast and convenient way to pay for my online purchases.
+  - *Payment Options*: I prefer a variety of payment methods, including UPI, cards, and wallets.
+  - *Offers and Discounts*: I look for personalized offers and cashback on my transactions.
+  - *Security*: I need assurance that my card details and personal data are protected.
 
-### 5.6 Use Case 6: Contacting Customer Support
-**Actors:** User, Customer Support Representative  
-**Description:** A user contacts customer support through chat or email for assistance.
+---
 
-## 6. Appendices
-### A. Glossary
-- **UPI ID:** A unique identifier associated with a user's bank account for digital transactions.
+### Ramesh Nair (Elderly User, Retired Professional)
 
-### B. Data Flow Diagrams
-- Include DFDs depicting key processes like registration, payment processing, and rewards.
+- *User Requirements*:
+  - *User Experience*: I need a simple and easy-to-navigate interface with larger fonts and clear instructions.
+  - *Support*: I require responsive customer support to assist with any payment issues.
+  - *Security*: I want high-security measures to protect against fraud.
+  - *Transaction History*: I need clear records of my payments for personal accounting purposes.
 
-### C. User Interface Mockups
-- Include wireframes or mockups of primary user interfaces.
+---
 
-### D. Additional Notes
-- Any additional information pertinent to the project.
+### Pooja Singh (College Student)
 
+- *User Requirements*:
+  - *Ease of Use*: I want a straightforward way to pay for daily expenses, like splitting bills with friends.
+  - *Rewards*: I enjoy earning cashback and rewards for my transactions.
+  - *Flexibility*: I need support for small transactions without additional fees.
+  - *Security*: I want my account details to remain private and secure.
+
+---
+
+## Conclusion
+
+This document outlines the specific user requirements for various stakeholders involved in the Google Pay project. These requirements will guide the design and development of the platform to meet the needs of all stakeholders, ensuring a seamless and secure payment experience.
