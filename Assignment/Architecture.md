@@ -90,7 +90,7 @@ MerchantGateway --> MerchantDB : Log Merchant Data
 
 ```
 
-![System Context](./Diagrams/C.png)
+![Container Diagram](./Diagrams/Container.png)
 
 
 # 3. Component Diagram - Google Pay Payment Processing
@@ -174,7 +174,7 @@ Notification ..> NotificationInterface : implements
 
 ```
 
-![Component Diagram](./Diagrams/S.png)
+![Component Diagram](./Diagrams/component2.png)
 
 ```plantuml
 
@@ -226,7 +226,7 @@ Notification --> FetchNotifications
 
 ```
 
-![Component Diagram](./Diagrams/component.png)
+![Component Diagram](./Diagrams/component1.png)
 
 # 3. Deployment Diagram - Google Pay
 
