@@ -114,30 +114,41 @@ def login(username, password):
     else:
         return "Invalid Credentials"
 ```
-
 ## 6. Human Interface Design
 
 ### 6.1 Overview of User Interface
-Users can log in, initiate payments, view transaction history, and receive notifications. The design emphasizes simplicity and responsiveness.
+![Overall UI](Diagrams/Design/SWE/overall.png)
+The user interface allows users to log in, initiate payments, view transaction history, and receive notifications. The design prioritizes simplicity and responsiveness to ensure a seamless user experience.
 
-### 6.2 Screen Images
-- **Home Page:** Displays a list of transactions and payment options.  
-   <img src="Diagrams/Design/a4.jpeg" width="200">
+### 6.2 Initial Design 
+- **Home Page:** Displays a list of recent transactions and available payment options.  
+   ![Home Page](Diagrams/Design/SWE/login_signup.png)
 
-- **Profile Page:** Displays all Profile options.  
-   <img src="Diagrams/Design/a1.jpeg" width="200">
+- **Home Page After User Logged In:** Shows profile options and user-specific features.  
+   ![Home Page After Login](Diagrams/Design/SWE/home_after_login.png)
 
-- **User to User Transaction Page:** Displays all User to User Transactions.  
-   <img src="Diagrams/Design/a3.jpeg" width="200">
+- **User to User Transaction Page:** Lists all transactions between users.  
+   ![User to User Transactions](Diagrams/Design/SWE/user_to_user.png)
 
-- **Money Management:**  
-   <img src="Diagrams/Design/a2.jpeg" width="200">
+- **Spending Page:** Provides an overview of user spending.  
+   ![Spending Page](Diagrams/Design/SWE/speending.png)
 
+- **Complete Transaction History:** Displays the full history of user transactions.  
+   ![Transaction History](Diagrams/Design/SWE/transictions.png)
+
+- **Settings Page:** Allows users to configure their preferences and account settings.  
+   ![Settings Page](Diagrams/Design/SWE/seetings.png)
+
+These UI designs were created using Figma and Galileo Design tools.
 ### 6.3 Screen Objects and Actions
 | **Screen Object**  | **Action**                  |  
 |---------------------|----------------------------|  
 | Login Button       | Initiates login process.    |  
 | Pay Now Button     | Navigates to payment page.  |  
+| Transaction List   | Displays recent transactions.|  
+| Notification Icon  | Shows new notifications.    |  
+| Settings Icon      | Opens settings menu.        |  
+| Logout Button      | Logs the user out of the application. |  
 
 ---
 
