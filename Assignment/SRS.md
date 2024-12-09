@@ -255,11 +255,12 @@ graph TD
 
 ### 5.1 Performance Requirements
 
-| Metric | Normal Load | Peak Load |
-|--------|-------------|-----------|
-| Transaction Processing Time | < 2 seconds | < 5 seconds |
-| Concurrent Gpay Users | 10,000 | 50,000 |
-| API Response Time | < 300ms | < 1 second |
+| Metric                     | Normal Load                       | Peak Load                         |
+|----------------------------|------------------------------------|------------------------------------|
+| Transaction Processing Time | Prompt and seamless               | Consistently efficient             |
+| Concurrent Gpay Users       | Supports a significant user base  | Accommodates a high volume of users |
+| API Response Time           | Rapid and responsive              | Reliable under increased demand     |
+
 
 ### 5.2 Security Requirements
 
