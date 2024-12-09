@@ -184,7 +184,7 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 ## **4. Non-Functional Requirements**
 
 ### **4.1 Performance**
-- Transactions must be processed within 2 seconds under normal conditions.
+- Transactions must be processed promptly to ensure a seamless user experience under normal conditions.
 - Notifications must be delivered in real time.
 
 ### **4.2 Scalability**
@@ -192,7 +192,7 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 - New features must be integrated seamlessly.
 
 ### **4.3 Reliability**
-- The platform must have 99.9% uptime with minimal outages.
+- The platform must ensure high availability, with minimal downtime and uninterrupted service.
 - Backup systems must ensure data integrity during failures.
 
 ### **4.4 Usability**
