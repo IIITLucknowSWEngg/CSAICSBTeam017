@@ -22,7 +22,7 @@
 ## 1. Introduction
 
 ### 1.1 Purpose
-Google Pay is designed to provide users with a seamless and secure payment platform. It enables users to make online and offline payments, transfer money, and manage their finances. This document defines the requirements for building and maintaining the platform.
+Google Pay is designed to provide Gpay users with a seamless and secure payment platform. It enables Gpay users to make online and offline payments, transfer money, and manage their finances. This document defines the requirements for building and maintaining the platform.
 
 ### 1.2 Project Scope
 Google Pay serves as a versatile platform for:
