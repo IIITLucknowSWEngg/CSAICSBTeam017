@@ -22,7 +22,7 @@
 ## 1. Introduction
 
 ### 1.1 Purpose
-Google Pay is designed to provide Gpay users with a seamless and secure payment platform. It enables Gpay users to make online and offline payments, transfer money, and manage their finances. This document defines the requirements for building and maintaining the platform.
+Google Pay is designed to provide users with a seamless and secure payment platform. It enables users to make online and offline payments, transfer money, and manage their finances. This document defines the requirements for building and maintaining the platform.
 
 ### 1.2 Project Scope
 Google Pay serves as a versatile platform for:
@@ -36,10 +36,10 @@ Google Pay serves as a versatile platform for:
 
 ```mermaid
 graph TB
-    A[Users] --> B[Google Pay Interface]
+    A[Gpay Users] --> B[Google Pay Interface]
     B --> C[Payment Gateway]
     B --> D[Banking Systems]
-    B --> E[User Management System]
+    B --> E[Gpay User Management System]
     C --> F[Transaction Database]
     D --> F
     E --> F
@@ -82,16 +82,16 @@ graph LR
 
 ## 3. Functional Requirements
 
-### 3.1 User Authentication & Authorization
+### 3.1 Gpay User Authentication & Authorization
 
 ```mermaid
 sequenceDiagram
-    User->>App: Login Request
+    Gpay User->>App: Login Request
     App->>Auth Service: Validate Credentials
-    Auth Service->>Database: Verify User
-    Database->>Auth Service: User Data
+    Auth Service->>Database: Verify Gpay User
+    Database->>Auth Service: Gpay User Data
     Auth Service->>App: Auth Token
-    App->>User: Access Granted
+    App->>Gpay User: Access Granted
 ```
 
 #### Detailed Requirements:
@@ -110,14 +110,14 @@ sequenceDiagram
 ```mermaid
 stateDiagram-v2
     [*] --> Initiated
-    Initiated --> Processing: User Confirms Payment
+    Initiated --> Processing: Gpay User Confirms Payment
     Processing --> Successful: Transaction Authorized
     Processing --> Failed: Insufficient Funds
 ```
 
 #### Payment Requirements:
 1. **Transaction Flow**
-   - Initiation by user (peer-to-peer or merchant)
+   - Initiation by Gpay User (peer-to-peer or merchant)
    - Secure tokenization of payment details
    - Authorization through PIN/biometrics
 
@@ -138,7 +138,7 @@ graph TD
 #### Requirements:
 1. **Expense Categorization**
    - Automatic classification based on transaction metadata
-   - User-defined categories
+   - Gpay User-defined categories
 
 2. **Insights and Reports**
    - Monthly/annual spending trends
@@ -146,42 +146,42 @@ graph TD
 
 ## 4. Use Cases
 
-## 4.1 **User Use Case: Send Money**
+## 4.1 **Gpay User Use Case: Send Money**
 **Use Case ID**: UC-01  
-**Actor**: User  
-**Description**: A user sends money to another user or merchant.
+**Actor**: Gpay User  
+**Description**: A Gpay User sends money to another Gpay User or merchant.
 
-- **Login**: User logs in with OTP/Biometric and enters User ID and optional Token ID.
-- **Token ID Verification**: If Token ID is valid, user is redirected to Merchant Interface; otherwise, stays in User Interface.
-- **Action Selection**: User selects "Send Money" and enters recipient details.
+- **Login**: Gpay User logs in with OTP/Biometric and enters Gpay User ID and optional Token ID.
+- **Token ID Verification**: If Token ID is valid, Gpay User is redirected to Merchant Interface; otherwise, stays in Gpay User Interface.
+- **Action Selection**: Gpay User selects "Send Money" and enters recipient details.
 - **Payment Validation**: System validates recipient credentials and payment credentials.
-- **Transaction Processing**: User confirms the payment, and the system processes it.
+- **Transaction Processing**: Gpay User confirms the payment, and the system processes it.
 - **Transaction History**: The system updates the transaction history.
-- **Notification**: The system notifies the user of payment success.
+- **Notification**: The system notifies the Gpay User of payment success.
 
 **Alternative Flows**:
-- **A1 (Invalid Recipient Details)**: If the recipient details are invalid, the system prompts the user to re-enter them.
-- **A2 (Insufficient Balance)**: If balance is insufficient, the system informs the user, and the transaction is not processed.
+- **A1 (Invalid Recipient Details)**: If the recipient details are invalid, the system prompts the Gpay User to re-enter them.
+- **A2 (Insufficient Balance)**: If balance is insufficient, the system informs the Gpay User, and the transaction is not processed.
 
 ---
 
-## 4.2 **User Use Case: Pay Bill**
+## 4.2 **Gpay User Use Case: Pay Bill**
 **Use Case ID**: UC-02  
-**Actor**: User  
-**Description**: A user pays a utility bill via the app.
+**Actor**: Gpay User  
+**Description**: A Gpay User pays a utility bill via the app.
 
-- **Login**: User logs in with OTP/Biometric and enters Token ID (if applicable).
-- **Authentication**: System authenticates the user.
-- **Action Selection**: User selects "Pay Bill" option.
+- **Login**: Gpay User logs in with OTP/Biometric and enters Token ID (if applicable).
+- **Authentication**: System authenticates the Gpay User.
+- **Action Selection**: Gpay User selects "Pay Bill" option.
 - **Utility Provider Selection**: System fetches the list of available utility providers.
 - **Payment Validation**: System validates payment credentials.
 - **Bill Payment Processing**: System processes the bill payment via API.
 - **Transaction History**: The system updates the transaction history.
-- **Notification**: The system notifies the user of payment success.
+- **Notification**: The system notifies the Gpay User of payment success.
 
 **Alternative Flows**:
-- **A1 (Unsupported Utility Provider)**: If the utility provider is unsupported, the system alerts the user and cancels the transaction.
-- **A2 (Payment Failure)**: If payment fails, the system informs the user and prompts retry.
+- **A1 (Unsupported Utility Provider)**: If the utility provider is unsupported, the system alerts the Gpay User and cancels the transaction.
+- **A2 (Payment Failure)**: If payment fails, the system informs the Gpay User and prompts retry.
 
 ---
 
@@ -190,8 +190,8 @@ graph TD
 **Actor**: Merchant  
 **Description**: A merchant processes a payment from a customer.
 
-- **Login**: Merchant logs in with User ID and Token ID.
-- **Token ID Verification**: If Token ID is valid, the system redirects to Merchant Interface; otherwise, stays in User Interface.
+- **Login**: Merchant logs in with Gpay User ID and Token ID.
+- **Token ID Verification**: If Token ID is valid, the system redirects to Merchant Interface; otherwise, stays in Gpay User Interface.
 - **Action Selection**: Merchant selects "Process Payment" option.
 - **QR Code Scanning**: Merchant scans customer QR code.
 - **Enter Payment Details**: Merchant enters the payment amount.
@@ -214,8 +214,8 @@ graph TD
 - **Verify Merchant Application**: Admin verifies merchant applications for validity.
 - **Approve Merchant Subscription**: Admin approves the merchant subscription after verification.
 - **Assign Token ID**: Admin assigns a Token ID to the merchant for business access.
-- **Manage Data**: Admin manages user and merchant data in the system.
-- **Customer Support**: Admin resolves user issues via customer support channels.
+- **Manage Data**: Admin manages Gpay User and merchant data in the system.
+- **Customer Support**: Admin resolves Gpay User issues via customer support channels.
 
 **Alternative Flows**:
 - **A1 (Incomplete Application)**: If merchant application is incomplete, admin requests additional details.
@@ -228,11 +228,11 @@ graph TD
 **Actor**: System  
 **Description**: The system processes the transaction, validates credentials, and updates histories.
 
-- **Authentication**: System verifies user credentials (OTP/Biometric).
+- **Authentication**: System verifies Gpay User credentials (OTP/Biometric).
 - **Payment Validation**: System validates payment details (recipient details, payment amount).
 - **Transaction Processing**: System communicates with the payment gateway to process the transaction.
-- **Send Notifications**: System sends payment success notifications to both user and merchant.
-- **Update Transaction History**: System updates transaction history for both user and merchant.
+- **Send Notifications**: System sends payment success notifications to both Gpay User and merchant.
+- **Update Transaction History**: System updates transaction history for both Gpay User and merchant.
 
 ---
 
@@ -244,7 +244,7 @@ graph TD
 - **Receive Payment Request**: System sends payment request to the payment gateway.
 - **Process Payment**: Payment gateway processes the payment via UPI or bank API.
 - **Transaction Status**: Payment gateway sends transaction status (success/failure) back to the system.
-- **Send Notification**: System notifies both user and merchant of the payment result.
+- **Send Notification**: System notifies both Gpay User and merchant of the payment result.
 
 ---
 ### Diagram:
@@ -258,7 +258,7 @@ graph TD
 | Metric | Normal Load | Peak Load |
 |--------|-------------|-----------|
 | Transaction Processing Time | < 2 seconds | < 5 seconds |
-| Concurrent Users | 10,000 | 50,000 |
+| Concurrent Gpay Users | 10,000 | 50,000 |
 | API Response Time | < 300ms | < 1 second |
 
 ### 5.2 Security Requirements
@@ -279,16 +279,16 @@ graph TD
 
 2. **Error Handling**
    - Comprehensive logging
-   - User-friendly error messages
+   - Gpay User-friendly error messages
 
 ### 5.4 Usability Requirements
 
-1. **User Interface Design**
+1. **Gpay User Interface Design**
    - Intuitive and easy-to-use mobile app interface.
    - Support for multiple languages and accessibility features.
 
-2. **User Training**
-   - In-app tutorials for new users.
+2. **Gpay User Training**
+   - In-app tutorials for new Gpay Users.
    - Context-sensitive help and tips.
 
 3. **Support Channels**
@@ -301,10 +301,10 @@ graph TD
    - Dynamic resource allocation to handle traffic spikes.
 
 2. **Horizontal Scaling**
-   - Load balancing for distributed servers to support a growing user base.
+   - Load balancing for distributed servers to support a growing Gpay User base.
 
 3. **Data Scalability**
-   - Efficient database sharding to manage large volumes of transactions and user data.
+   - Efficient database sharding to manage large volumes of transactions and Gpay User data.
 
 ## 6. System Constraints
 

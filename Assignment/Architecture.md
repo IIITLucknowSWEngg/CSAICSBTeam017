@@ -8,7 +8,7 @@
 @startuml
 title System Context Diagram for Google Pay
 
-actor User as U
+actor Gpay User as U
 actor Merchant as M
 actor Bank as B
 actor PaymentNetwork as PN
@@ -38,14 +38,14 @@ GPApp --> U : Displays Payment Status
 
 
 ### Description  
-- **Users**:  
+- **Gpay Users**:  
   - **Retail investors**: Interact with the Google Pay app to make payments.  
   - **Merchants**: Receive payments through the Google Pay app.  
 - **External Systems**:  
   - **Payment Networks**: Handle routing and processing of payments to banks.  
   - **Banks**: Process the financial transactions.  
 - **Components**:  
-  - **Google Pay Mobile App**: Allows users to initiate payments and receive payment statuses.  
+  - **Google Pay Mobile App**: Allows Gpay Users to initiate payments and receive payment statuses.  
   - **Google Pay Backend Services**: Handles routing payment requests and updating the status.  
 
 ---
@@ -55,7 +55,7 @@ GPApp --> U : Displays Payment Status
 ```plantuml
 
 @startuml
-actor "User" as User
+actor "Gpay User" as Gpay User
 actor "Merchant" as Merchant
 actor "Admin" as Admin
 
@@ -65,7 +65,7 @@ package "Frontend Layer" {
 
 package "Backend Layer" {
     [Backend API] as BackendAPI
-    [User Management Service] as UserService
+    [Gpay User Management Service] as Gpay UserService
     [Payment Processing Service] as PaymentService
     [Notification Service] as NotificationService
     [Analytics Service] as AnalyticsService
@@ -78,17 +78,17 @@ package "External Services Layer" {
 }
 
 package "Data Layer" {
-    [User Database] as UserDB
+    [Gpay User Database] as Gpay UserDB
     [Transaction Database] as TransactionDB
     [Merchant Database] as MerchantDB
 }
 
-User --> Frontend : Login, Add Cards, Make Payments
+Gpay User --> Frontend : Login, Add Cards, Make Payments
 Merchant --> Frontend : Receive Payments
-Admin --> BackendAPI : Manage Users, Transactions
+Admin --> BackendAPI : Manage Gpay Users, Transactions
 
 Frontend --> BackendAPI : API Requests
-BackendAPI --> UserService : User Authentication
+BackendAPI --> Gpay UserService : Gpay User Authentication
 BackendAPI --> PaymentService : Payment Processing
 BackendAPI --> NotificationService : Notifications
 BackendAPI --> AnalyticsService : Usage Analytics
@@ -98,7 +98,7 @@ PaymentService --> MerchantGateway : Route Merchant Payments
 
 NotificationService --> NotificationProvider : Push Notifications
 
-UserService --> UserDB : Save/Update User Info
+Gpay UserService --> Gpay UserDB : Save/Update Gpay User Info
 PaymentService --> TransactionDB : Save Transactions
 MerchantGateway --> MerchantDB : Log Merchant Data
 @enduml
@@ -109,18 +109,18 @@ MerchantGateway --> MerchantDB : Log Merchant Data
 
 
 ### Description  
-- **Users**:  
+- **Gpay Users**:  
   - **Retail investors**: Use the mobile app to log in, add payment methods, and make payments.  
   - **Merchants**: Receive payments through the app interface.  
-  - **Admins**: Manage users and transaction data through the backend API.  
+  - **Admins**: Manage Gpay Users and transaction data through the backend API.  
 - **External Systems**:  
   - **Banking API**: Handles transaction processing with banks.  
   - **Merchant Gateway**: Routes merchant payments for completion.  
   - **Notification Provider**: Sends notifications about transaction statuses.  
 - **Components**:  
-  - **Frontend Layer**: The **Google Pay App** (mobile/web) allows user interaction.  
-  - **Backend Layer**: Includes various services like **User Management**, **Payment Processing**, **Notification Service**, and **Analytics Service** that interact with databases and external APIs.  
-  - **Data Layer**: Stores user, transaction, and merchant data.  
+  - **Frontend Layer**: The **Google Pay App** (mobile/web) allows Gpay User interaction.  
+  - **Backend Layer**: Includes various services like **Gpay User Management**, **Payment Processing**, **Notification Service**, and **Analytics Service** that interact with databases and external APIs.  
+  - **Data Layer**: Stores Gpay User, transaction, and merchant data.  
 
 ---
 
@@ -136,12 +136,12 @@ title Class-based Component-Level Design for G-Pay
 
 ' Main Class - GPay
 class GPay {
-  - userAccounts
+  - Gpay UserAccounts
   - transactionHistory
   - notifications
   --
   + initializeApp()
-  + authenticateUser()
+  + authenticateGpay User()
   + manageWallet()
   + initiateTransaction()
 }
@@ -160,9 +160,9 @@ interface WalletInterface {
 }
 
 interface NotificationInterface {
-  + sendNotification(userID, message)
-  + scheduleReminder(userID, dateTime)
-  + fetchNotifications(userID)
+  + sendNotification(Gpay UserID, message)
+  + scheduleReminder(Gpay UserID, dateTime)
+  + fetchNotifications(Gpay UserID)
 }
 
 ' Elaborated Design Classes
@@ -187,7 +187,7 @@ class Wallet {
 
 class Notification {
   - notificationID
-  - userID
+  - Gpay UserID
   - type
   --
   + send()
@@ -218,7 +218,7 @@ title G-Pay Traditional Component-Level Design
 component "G-Pay System" as GPay
 
 ' Subcomponents
-component "User Authentication" as Auth
+component "Gpay User Authentication" as Auth
 component "Transaction Management" as Transaction
 component "Wallet Management" as Wallet
 component "Notification System" as Notification
@@ -262,12 +262,12 @@ Notification --> FetchNotifications
 ![Component Diagram](./Diagrams/component1.png)
 
 ### Description  
-- **Users**:  
+- **Gpay Users**:  
   - **Retail investors**: Use the app to manage payments, fund transfers, and view notifications.  
 - **External Systems**:  
   - **None explicitly**: The diagram focuses on internal components.  
 - **Components**:  
-  - **GPay**: The main class that interacts with users, manages accounts, and processes transactions.  
+  - **GPay**: The main class that interacts with Gpay Users, manages accounts, and processes transactions.  
   - **Payment**, **Wallet**, and **Notification** classes handle specific operations like initiating payments, managing balances, and sending notifications.  
   - **Interfaces**: Abstract operations for payments, wallet management, and notifications, allowing easy integration and operation with the underlying system.
 
@@ -283,11 +283,11 @@ Notification --> FetchNotifications
 title Deployment Diagram - Google Pay System
 
 ' Nodes
-node "User's Mobile Device" {
+node "Gpay User's Mobile Device" {
     [Google Pay Mobile App] <<Mobile App>>
 }
 
-node "User's PC" {
+node "Gpay User's PC" {
     [Google Pay Web App] <<Web App>>
 }
 
@@ -301,11 +301,11 @@ node "Application Server" {
     [Payment Service] <<Service>>
     [Fraud Detection Service] <<Service>>
     [Notification Service] <<Service>>
-    [User Management Service] <<Service>>
+    [Gpay User Management Service] <<Service>>
 }
 
 node "Database Server" {
-    database "User Database" as UserDB
+    database "Gpay User Database" as Gpay UserDB
     database "Transaction Database" as TxnDB
     database "Payment Database" as PaymentDB
 }
@@ -322,22 +322,22 @@ cloud "Third-Party Services" {
 [Google Pay Mobile App] --> [Payment Service] : "Process Payments"
 [Google Pay Mobile App] --> [Fraud Detection Service] : "Monitor Transactions"
 [Google Pay Mobile App] --> [Notification Service] : "Receive Notifications"
-[Google Pay Mobile App] --> [User Management Service] : "Manage Account"
+[Google Pay Mobile App] --> [Gpay User Management Service] : "Manage Account"
 
 [Google Pay Web App] --> [Authentication Service] : "Login/Signup"
 [Google Pay Web App] --> [Transaction Service] : "Initiate Transactions"
 [Google Pay Web App] --> [Payment Service] : "Process Payments"
 [Google Pay Web App] --> [Fraud Detection Service] : "Monitor Transactions"
 [Google Pay Web App] --> [Notification Service] : "Receive Notifications"
-[Google Pay Web App] --> [User Management Service] : "Manage Account"
+[Google Pay Web App] --> [Gpay User Management Service] : "Manage Account"
 
-[Admin Web Dashboard] --> [User Management Service] : "Manage Users"
+[Admin Web Dashboard] --> [Gpay User Management Service] : "Manage Gpay Users"
 [Admin Web Dashboard] --> [Transaction Service] : "Monitor Transactions"
 [Admin Web Dashboard] --> [Payment Service] : "Monitor Payments"
 [Admin Web Dashboard] --> [Fraud Detection Service] : "View Fraud Alerts"
 
 [Transaction Service] --> TxnDB : "Store Transaction Records"
-[User Management Service] --> UserDB : "Store User Data"
+[Gpay User Management Service] --> Gpay UserDB : "Store Gpay User Data"
 [Payment Service] --> PaymentDB : "Store Payment Data"
 [Fraud Detection Service] --> TxnDB : "Analyze Transaction Data"
 
@@ -351,15 +351,15 @@ cloud "Third-Party Services" {
 ![Deployment Diagram](./Diagrams/Deployment.png)
 
 ### Description  
-- **Users**:  
+- **Gpay Users**:  
   - **Retail investors**: Access Google Pay through either mobile or web apps to make payments and manage accounts.  
-  - **Admins**: Use the Admin Web Dashboard to monitor transactions, manage users, and view fraud alerts.  
+  - **Admins**: Use the Admin Web Dashboard to monitor transactions, manage Gpay Users, and view fraud alerts.  
 - **External Systems**:  
   - **Payment Gateway**: Routes payment processing requests to card networks and banks.  
   - **Card Network (Visa/Mastercard)**: Authorizes card transactions.  
   - **Bank API**: Authorizes and processes bank payments.  
 - **Components**:  
-  - **User's Mobile Device & PC**: Host the **Google Pay Mobile App** and **Google Pay Web App** for user interaction.  
-  - **Application Server**: Runs services like **Authentication**, **Payment**, **Fraud Detection**, **Notification**, and **User Management**.  
-  - **Database Server**: Hosts databases for user, transaction, and payment data.  
+  - **Gpay User's Mobile Device & PC**: Host the **Google Pay Mobile App** and **Google Pay Web App** for Gpay User interaction.  
+  - **Application Server**: Runs services like **Authentication**, **Payment**, **Fraud Detection**, **Notification**, and **Gpay User Management**.  
+  - **Database Server**: Hosts databases for Gpay User, transaction, and payment data.  
   - **Third-Party Services**: Handle payment authorization and processing.

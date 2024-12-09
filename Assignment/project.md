@@ -13,7 +13,7 @@
 
 ## Introduction
 
-Google Pay is a leader in the digital payment ecosystem, simplifying transactions and providing a secure platform for millions worldwide. This project explores the underlying structure and features of such a platform, focusing on scalability, security, and user-centric design.
+Google Pay is a leader in the digital payment ecosystem, simplifying transactions and providing a secure platform for millions worldwide. This project explores the underlying structure and features of such a platform, focusing on scalability, security, and Gpay User-centric design.
 
 ## Vision Statement
 
@@ -23,28 +23,28 @@ Our aim is to build a platform that prioritizes speed, security, and accessibili
 
 ## Core Features
 
-### 1. User Management System 👥🔐
+### 1. Gpay User Management System 👥🔐
 
-An advanced user system for smooth onboarding and account management:
+An advanced Gpay User system for smooth onboarding and account management:
 
 ```mermaid
 graph LR
-    A[User Registers] --> B[Phone/Email Verification]
+    A[Gpay User Registers] --> B[Phone/Email Verification]
     B --> C[KYC Completion]
     C --> D[Account Activation]
 ```
 
 - **Smart Authentication**: Biometric, OTP, and 2FA for enhanced security.
 - **Personalized Dashboards**: Display linked accounts, transaction history, and rewards.
-- **KYC Integration**: Adherence to regulatory requirements for user verification.
+- **KYC Integration**: Adherence to regulatory requirements for Gpay User verification.
 
 ### 2. Payment System 💳💸
 
-Effortless and secure payments for users and merchants:
+Effortless and secure payments for Gpay Users and merchants:
 
 ```mermaid
 graph TD
-    A[User Initiates Payment] --> B[Enter Amount/Scan QR]
+    A[Gpay User Initiates Payment] --> B[Enter Amount/Scan QR]
     B --> C[Payment Authorization]
     C -->|Secure API| D[Payment Gateway]
     D --> E[Transaction Completed]
@@ -57,16 +57,16 @@ Key highlights:
 
 ### 3. Rewards and Cashback 🎁💰
 
-Engage users with incentives for activity:
+Engage Gpay Users with incentives for activity:
 
 ```mermaid
 graph LR
-    A[User Completes Transaction] --> B[Rewards Engine]
+    A[Gpay User Completes Transaction] --> B[Rewards Engine]
     B --> C[Cashback Processing]
     C --> D[Credit to Wallet/Bank]
 ```
 
-- **Cashbacks and Offers**: Personalized rewards for frequent users.
+- **Cashbacks and Offers**: Personalized rewards for frequent Gpay Users.
 - **Loyalty Programs**: Points for transactions redeemable for discounts.
 
 ### 4. Merchant Services 🛍️📈
@@ -88,16 +88,16 @@ graph LR
 
 Encouraging a vibrant ecosystem with active support:
 
-- **Forums and Guides**: Help users navigate platform features.
+- **Forums and Guides**: Help Gpay Users navigate platform features.
 - **Customer Support**: 24/7 live chat and phone support.
-- **Feedback Loop**: Continuous improvement based on user suggestions.
+- **Feedback Loop**: Continuous improvement based on Gpay User suggestions.
 
 ## Project Boundaries
 
 ### What We're Building 🎯
 1. **Core Platform**
    - Secure and scalable payment infrastructure.
-   - User-friendly mobile and web interfaces.
+   - Gpay User-friendly mobile and web interfaces.
    - Compliance with regional financial regulations.
 
 2. **Features**
@@ -130,23 +130,23 @@ graph TD
 
 Key considerations:
 - **Microservices Architecture**: Ensures scalability and fault tolerance.
-- **Encryption Standards**: Secure sensitive user data.
+- **Encryption Standards**: Secure sensitive Gpay User data.
 - **Fraud Detection**: Real-time monitoring for suspicious activity.
 
 ### Payment Flow Diagram
 
 ```mermaid
 sequenceDiagram
-    participant User
+    participant Gpay User
     participant App
     participant PaymentGateway
     participant Bank
-    User->>App: Initiates Payment
+    Gpay User->>App: Initiates Payment
     App->>PaymentGateway: Sends Payment Request
     PaymentGateway->>Bank: Validates Transaction
     Bank-->>PaymentGateway: Confirms Payment
     PaymentGateway-->>App: Success Response
-    App-->>User: Displays Confirmation
+    App-->>Gpay User: Displays Confirmation
 ```
 
 ## References & Inspiration

@@ -40,7 +40,7 @@ Stakeholders are grouped into the following categories:
 
 | **Stakeholder**         | **Role**                       | **Responsibilities**                                | **Impact**                              | **Qualifications**                               |
 |-------------------------|---------------------------------|----------------------------------------------------|------------------------------------------|-------------------------------------------------|
-| Application Developers  | Documentation Users            | - Use documentation for integrating Google Pay.    | Drive the effectiveness of the integration process. | Proficient in backend development and API usage. |
+| Application Developers  | Documentation Gpay Users            | - Use documentation for integrating Google Pay.    | Drive the effectiveness of the integration process. | Proficient in backend development and API usage. |
 | Business Owners         | Decision Makers                | - Leverage Google Pay for customer transactions.   | Expand payment options and business growth. | Knowledgeable in e-commerce or app-based services. |
 | QA Engineers            | Integration Testers            | - Validate the integration process with test cases. | Identify and report potential bugs or inconsistencies. | Skilled in testing frameworks and payment systems. |
 | Marketing Teams         | Adoption Drivers               | - Promote the benefits of Google Pay integration.  | Drive developer engagement and usage.    | Experts in digital marketing strategies and technical communication. |
@@ -53,8 +53,8 @@ Stakeholders are grouped into the following categories:
 |-------------------------|---------------------------------|----------------------------------------------------|------------------------------------------|-------------------------------------------------|
 | Google Pay API Team     | Technology Providers           | - Provide API specifications and updates.          | Ensure compatibility and feature richness. | Experts in API design and Google Pay architecture. |
 | Integration Partners    | Technical Support Providers    | - Offer third-party tools and support services.    | Facilitate developers with advanced tools.  | Vendors with experience in payment processing. |
-| User Accounts           | End Users                      | - Create accounts for using Google Pay services.   | Enable authentication and user-specific features. | Individuals with basic technical know-how. |
-| Login Systems           | Authentication Providers       | - Securely handle login and session management.    | Ensure user security and privacy during interactions. | Expertise in secure authentication protocols. |
+| Gpay User Accounts           | End Gpay Users                      | - Create accounts for using Google Pay services.   | Enable authentication and Gpay User-specific features. | Individuals with basic technical know-how. |
+| Login Systems           | Authentication Providers       | - Securely handle login and session management.    | Ensure Gpay User security and privacy during interactions. | Expertise in secure authentication protocols. |
 | Payment Gateways        | Transaction Processors         | - Facilitate the processing of payments.           | Ensure smooth and secure transactions.   | Experts in payment gateway implementation and security. |
 | Partner Organizations   | Collaborative Innovators       | - Work with Google to expand integration use cases. | Enhance features and adoption through partnerships. | Experienced in fintech and technical collaboration. |
 
@@ -63,9 +63,9 @@ Stakeholders are grouped into the following categories:
 
 | **Stakeholder**         | **Purpose**                                                    | **Login Method**                                              | **Examples**                                             |
 |-------------------------|--------------------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------|
-| GPay Users (End Users)  | To access their Google Pay accounts for making payments, viewing transaction history, and managing linked bank accounts or cards. | Through their Google account or linked credentials.         | - Individuals using Google Pay for personal payments.  <br> - Customers making purchases in stores or online. |
+| GPay Gpay Users (End Gpay Users)  | To access their Google Pay accounts for making payments, viewing transaction history, and managing linked bank accounts or cards. | Through their Google account or linked credentials.         | - Individuals using Google Pay for personal payments.  <br> - Customers making purchases in stores or online. |
 | Merchants (Business Owners) | To manage transactions, track customer payments, and reconcile accounts. | Through a merchant account tied to their Google Pay Merchant Center. | - Store owners using Google Pay for receiving payments. <br> - E-commerce businesses using Google Pay integration. |
-| Support and Technical Teams | To provide customer support, resolve issues, or assist with merchant and user onboarding. | Through dedicated Google accounts with appropriate permissions. | - Payment gateway technical support teams. <br> - Customer service representatives assisting users and businesses. |
+| Support and Technical Teams | To provide customer support, resolve issues, or assist with merchant and Gpay User onboarding. | Through dedicated Google accounts with appropriate permissions. | - Payment gateway technical support teams. <br> - Customer service representatives assisting Gpay Users and businesses. |
 | Banks (Financial Institutions and Payment Service Providers) | To enable account linking, process transactions, and provide financial services. | Through secure institutional credentials or integrated systems. | - Partner banks offering Google Pay as a payment method. <br> - Payment service providers supporting backend processing. |
 
 
@@ -74,8 +74,8 @@ Stakeholders are grouped into the following categories:
 
 | **Stakeholder**         | **Role**                       | **Responsibilities**                                | **Impact**                              | **Qualifications**                               |
 |-------------------------|---------------------------------|----------------------------------------------------|------------------------------------------|-------------------------------------------------|
-| Compliance Authorities  | Legal Advisors                 | - Ensure the documentation adheres to legal and regulatory standards (e.g., PCI DSS). | Safeguard user privacy and data security. | Legal and compliance experts in fintech. |
-| Data Protection Agencies| Privacy Advocates              | - Monitor adherence to data privacy regulations.   | Maintain user trust and comply with laws. | Specialists in GDPR, CCPA, or equivalent regulations. |
+| Compliance Authorities  | Legal Advisors                 | - Ensure the documentation adheres to legal and regulatory standards (e.g., PCI DSS). | Safeguard Gpay User privacy and data security. | Legal and compliance experts in fintech. |
+| Data Protection Agencies| Privacy Advocates              | - Monitor adherence to data privacy regulations.   | Maintain Gpay User trust and comply with laws. | Specialists in GDPR, CCPA, or equivalent regulations. |
 | Standardization Bodies  | Industry Regulators            | - Define standards for payment integrations.       | Ensure interoperability and quality.     | Experts in ISO standards for fintech and APIs. |
 
 ---
@@ -87,13 +87,13 @@ Stakeholders are grouped into the following categories:
 1. **Clarity:** Ensure all stakeholders have a clear understanding of Google Pay's purpose and features.  
 2. **Accuracy:** Maintain high standards of factual correctness and technical reliability.  
 3. **Accessibility:** Ensure the documentation is easily accessible and understandable.  
-4. **Feedback-Driven:** Incorporate feedback from users to improve the content.  
+4. **Feedback-Driven:** Incorporate feedback from Gpay Users to improve the content.  
 
 ### 4.2 Communication Channels
 
 | **Channel Type**         | **Purpose**                                  | **Examples**                                     |
 |--------------------------|----------------------------------------------|-------------------------------------------------|
-| **Formal Documentation** | Author and distribute materials              | Official documentation portals, user manuals.   |
+| **Formal Documentation** | Author and distribute materials              | Official documentation portals, Gpay User manuals.   |
 | **Developer Forums**     | Foster collaboration and query resolution    | Google Developer Communities, Stack Overflow.   |
 | **Support Channels**     | Address feature-related issues               | Email support, dedicated help desks.            |
 | **Social Media Platforms** | Increase awareness and adoption             | LinkedIn, Twitter, and GitHub for updates.      |
@@ -105,15 +105,15 @@ Stakeholders are grouped into the following categories:
 | **Risk Category**        | **Potential Impact**                         | **Mitigation Strategy**                         |
 |--------------------------|---------------------------------------------|------------------------------------------------|
 | Outdated Information     | Confusion and feature underutilization      | Regularly update the documentation with feature changes. |
-| Lack of Clarity          | Misunderstanding during usage               | Perform user testing and gather feedback to improve clarity. |
+| Lack of Clarity          | Misunderstanding during usage               | Perform Gpay User testing and gather feedback to improve clarity. |
 | Non-Compliance           | Legal and reputational damage              | Consult with legal and compliance experts during development. |
-| Limited Accessibility    | Reduced reach to intended users             | Publish documentation in multiple languages and formats. |
+| Limited Accessibility    | Reduced reach to intended Gpay Users             | Publish documentation in multiple languages and formats. |
 
 ---
 
 ## 6. Conclusion
 
-The **Google Pay Documentation** project aims to provide users with a robust and clear guide for understanding and leveraging Google Pay. By involving key stakeholders and addressing potential risks, this strategy ensures the creation of high-quality resources.
+The **Google Pay Documentation** project aims to provide Gpay Users with a robust and clear guide for understanding and leveraging Google Pay. By involving key stakeholders and addressing potential risks, this strategy ensures the creation of high-quality resources.
 
 ---
 
@@ -163,7 +163,7 @@ graph TD
     A --> D[Non-Compliance]  
     A --> E[Limited Accessibility]  
     B --> F[Regular Updates]  
-    C --> G[User Testing and Feedback]  
+    C --> G[Gpay User Testing and Feedback]  
     D --> H[Consult Legal Experts]  
     E --> I[Multi-language and Format Support]  
 ```  

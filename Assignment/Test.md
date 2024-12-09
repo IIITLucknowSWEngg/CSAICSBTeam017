@@ -23,7 +23,7 @@ The purpose of this document is to outline the testing strategy, methodology, an
 ---
 
 ### **1.2 Test Items**  
-- User Management  
+- Gpay User Management  
 - Payment Transactions  
 - Security and Fraud Prevention  
 - Wallet and Bank Integration  
@@ -31,7 +31,7 @@ The purpose of this document is to outline the testing strategy, methodology, an
 ---
 
 ### **1.3 Features to be Tested**  
-- **User Management System**: Registration, login, and profile features.  
+- **Gpay User Management System**: Registration, login, and profile features.  
 - **Payment Transactions**: Peer-to-peer payments, bill payments, and refunds.  
 - **Security**: OTP verification, encryption, and fraud detection.  
 - **Integration**: Wallet management and bank linkage.  
@@ -49,7 +49,7 @@ The testing process includes:
 1. **Unit Testing**: Validating individual modules.  
 2. **Integration Testing**: Ensuring proper interactions between components.  
 3. **System Testing**: Testing the end-to-end functionality.  
-4. **Acceptance Testing**: Validating against user requirements.  
+4. **Acceptance Testing**: Validating against Gpay User requirements.  
 5. **Performance Testing**: Ensuring scalability and responsiveness under load.  
 
 **Testing Style**: Behavior-Driven Development (BDD) using **Cucumber** for Gherkin-style test scenarios and **Chai** for assertions.  
@@ -87,7 +87,7 @@ graph LR
   A --> G[Encryption Service]
 ```
 
-- Database : Preloaded with test data for user accounts, transactions, and linked banks.
+- Database : Preloaded with test data for Gpay User accounts, transactions, and linked banks.
 - Payment Gateway : Mock setup to simulate transactions without real-world implications.
 
 ---
@@ -100,14 +100,14 @@ This design ensures compliance with functional, performance, and security requir
 ---
 
 ### **2.2 Test Features Overview**  
-- **User Management**: Secure registration, login, and profile management.  
+- **Gpay User Management**: Secure registration, login, and profile management.  
 - **Payments**: Real-time peer-to-peer transactions, bill payments, and refunds.  
 - **Security**: Fraud detection, OTP validation, and encryption.  
 - **Integration**: Wallet top-ups and seamless bank linking.  
 
 ```mermaid
 flowchart TD
-    A[User Management] -->|Create & Manage Accounts| B[Wallet Transactions]
+    A[Gpay User Management] -->|Create & Manage Accounts| B[Wallet Transactions]
     B -->|Peer-to-Peer Payments| C[Payment Processing]
     C -->|Bank Integration| D[Fraud Prevention]
     D -->|Transaction Monitoring| E[Refund Processing] 
@@ -117,15 +117,15 @@ flowchart TD
 
 ## 3. Test Case Specification
 
-### 3.1 User Registration
+### 3.1 Gpay User Registration
 ```gherkin
-Feature: User Registration
+Feature: Gpay User Registration
 
-  Scenario: Successful user registration
-    Given a new user is on the registration page
-    When the user enters valid registration details
-    And the user submits the registration form
-    Then the user account should be created
+  Scenario: Successful Gpay Gpay User registration
+    Given a new Gpay User is on the registration page
+    When the Gpay User enters valid registration details
+    And the Gpay User submits the registration form
+    Then the Gpay User account should be created
     And a verification email should be sent
 ```
 
@@ -133,7 +133,7 @@ Feature: User Registration
 const chai = require('chai');
 const expect = chai.expect;
 
-describe('User Registration', () => {
+describe('Gpay User Registration', () => {
   it('should create a user account and send a verification email', () => {
     const registrationDetails = {
       email: 'user@example.com',
@@ -153,7 +153,7 @@ Feature: Peer-to-Peer Payment
 
   Scenario: Successful peer-to-peer transaction
     Given a registered user has sufficient wallet balance
-    When the user initiates a transaction to another user
+    When the user initiates a transaction to another Gpay User
     Then the transaction should be processed successfully
     And the recipient's wallet should be updated
 ```
@@ -226,14 +226,14 @@ describe('Fraud Prevention', () => {
 
 | Scenario                    | Test Case                          | Expected Outcome                        |  
 |-----------------------------|-------------------------------------|----------------------------------------|  
-| User Load Testing           | 500 simultaneous users logging in  | Latency < 200ms, No server crashes     |  
+| Gpay User Load Testing           | 500 simultaneous Gpay Users logging in  | Latency < 200ms, No server crashes     |  
 | Payment Load Testing        | 1,000 transactions per minute      | Transactions processed < 2 seconds     |  
 
 ### 5.1 Functional Testing
 
 | Module                  | Test Case                                                   | Expected Outcome                                                   |
 |-------------------------|-------------------------------------------------------------|--------------------------------------------------------------------|
-| User Management System  | Register with valid and invalid credentials.                | Successful registration or appropriate error messages.             |
+| Gpay User Management System  | Register with valid and invalid credentials.                | Successful registration or appropriate error messages.             |
 |                         | Authenticate using Google account.                          | Successful login via OAuth.                                        |
 |                         | Update profile details.                                     | Profile updates saved successfully.                                |
 | Payment System          | Peer-to-peer payments.                                      | Transactions processed accurately.                                 |
@@ -245,7 +245,7 @@ describe('Fraud Prevention', () => {
 
 | Scenario                    | Test Case                                         | Expected Outcome                                                   |
 |-----------------------------|---------------------------------------------------|--------------------------------------------------------------------|
-| User Load Testing           | 500 simultaneous users logging in and browsing.  | Stable performance with minimal latency.                           |
+| Gpay User Load Testing           | 500 simultaneous Gpay Users logging in and browsing.  | Stable performance with minimal latency.                           |
 | Payment Load Testing        | 1,000 transactions per minute.                   | Transactions processed < 2 seconds.                                |
 | Fraud Detection Stress Test | 10,000 transactions in an hour.                  | Real-time alerts and fraud prevention triggered.                   |
 

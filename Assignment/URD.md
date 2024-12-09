@@ -1,23 +1,23 @@
-# **User Requirements Document (URD) for GPay**
+# **Gpay User Requirements Document (URD) for GPay**
 
 ## **Overview**
 
-This document outlines the user requirements for **GPay**, a digital payment platform that facilitates seamless transactions for users, merchants, and banks while ensuring robust technical support. The platform aims to provide a secure and efficient way for users to send and receive money, make purchases, and manage their finances.
+This document outlines the Gpay User requirements for **GPay**, a digital payment platform that facilitates seamless transactions for Gpay Users, merchants, and banks while ensuring robust technical support. The platform aims to provide a secure and efficient way for Gpay Users to send and receive money, make purchases, and manage their finances.
 
 ---
 
 ## **Table of Contents**
 
-1. [User Stories](#1-user-stories)  
+1. [Gpay User Stories](#1-Gpay User-stories)  
 2. [Use Cases](#2-use-cases)  
 3. [Functional Requirements](#3-functional-requirements)  
 4. [Non-Functional Requirements](#4-non-functional-requirements)  
 
 ---
 
-## **1. User Stories**
+## **1. Gpay User Stories**
 
-### **User 1: End User**
+### **Gpay User 1: End Gpay User**
 - **Scenario**: I want a secure and simple way to transfer money, pay bills, and track my expenses.
 - **Goals**:
   1. Send and receive money using phone numbers, QR codes, or UPI IDs.
@@ -31,7 +31,7 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 
 ---
 
-### **User 2: Merchant**
+### **Gpay User 2: Merchant**
 - **Scenario**: I own a business and want a reliable payment solution to manage transactions and attract customers.
 - **Goals**:
   1. Register my business and start accepting digital payments quickly.
@@ -45,8 +45,8 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 
 ---
 
-### **User 3: Bank Integration Manager**
-- **Scenario**: I manage the backend payment infrastructure and ensure smooth financial operations for users and merchants.
+### **Gpay User 3: Bank Integration Manager**
+- **Scenario**: I manage the backend payment infrastructure and ensure smooth financial operations for Gpay Users and merchants.
 - **Goals**:
   1. Provide secure APIs for UPI and other payment methods.
   2. Monitor and resolve transaction failures promptly.
@@ -59,14 +59,14 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 
 ---
 
-### **User 4: Technical and Support Team**
-- **Scenario**: I maintain the platform’s performance and resolve user issues efficiently.
+### **Gpay User 4: Technical and Support Team**
+- **Scenario**: I maintain the platform’s performance and resolve Gpay User issues efficiently.
 - **Goals**:
   1. Monitor platform uptime and resolve performance bottlenecks.
-  2. Provide prompt support to users facing transaction issues.
+  2. Provide prompt support to Gpay Users facing transaction issues.
   3. Analyze logs to identify root causes of failures.
   4. Ensure quick rollouts of updates and bug fixes.
-  5. Communicate with stakeholders to improve user experience.
+  5. Communicate with stakeholders to improve Gpay User experience.
 - **Pain Points**:
   - Limited visibility into root causes of technical glitches.
   - Handling high volumes of support requests during outages.
@@ -76,13 +76,13 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 ## **2. Use Cases**
 
 ### **Use Case 1: Money Transfer**
-- **Actor**: End User
+- **Actor**: End Gpay User
 - **Steps**:
   1. Open the app and select the transfer option.
   2. Enter recipient details (phone number, UPI ID, or QR code).
   3. Enter the amount and confirm the payment with a PIN.
   4. Receive confirmation and a digital receipt.
-- **Outcome**: The user successfully transfers money securely and receives instant confirmation.
+- **Outcome**: The Gpay User successfully transfers money securely and receives instant confirmation.
 
 ---
 
@@ -102,33 +102,33 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 - **Steps**:
   1. Monitor transaction data in real time via API integrations.
   2. Identify and flag failed or suspicious transactions.
-  3. Resolve issues promptly and notify users.
+  3. Resolve issues promptly and notify Gpay Users.
   4. Generate compliance reports as required.
 - **Outcome**: The bank ensures smooth payment processing and regulatory compliance.
 
 ---
 
-### **Use Case 4: User Support**
+### **Use Case 4: Gpay User Support**
 - **Actor**: Technical and Support Team
 - **Steps**:
-  1. Receive a user complaint or support ticket.
+  1. Receive a Gpay User complaint or support ticket.
   2. Analyze transaction logs to identify the issue.
-  3. Resolve the issue and update the user with a solution.
+  3. Resolve the issue and update the Gpay User with a solution.
   4. Document recurring issues for platform improvement.
-- **Outcome**: The support team resolves user concerns promptly, enhancing trust in the platform.
+- **Outcome**: The support team resolves Gpay User concerns promptly, enhancing trust in the platform.
 
 ---
 
 ## **3. Functional Requirements**
 
-### **3.1 User Registration and Login**
-**Users, Merchants, and Banks:**
+### **3.1 Gpay User Registration and Login**
+**Gpay Users, Merchants, and Banks:**
 - Must be able to register using a phone number or email.
 - Must be able to log in with secure credentials and biometric options.
 - Password reset and account recovery options must be available.
 
 ### **3.2 Account Management**
-**Users:**
+**Gpay Users:**
 - Must be able to link and manage multiple bank accounts.
 - Must be able to update personal details and payment preferences.
 
@@ -137,7 +137,7 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 - Must have options to enable auto-settlement of funds.
 
 ### **3.3 Payments and Transactions**
-**Users:**
+**Gpay Users:**
 - Must be able to initiate money transfers via phone numbers, UPI IDs, or QR codes.
 - Must be able to schedule recurring payments (e.g., utility bills).
 
@@ -150,12 +150,12 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 - Must provide APIs for real-time payment updates.
 
 ### **3.4 Rewards and Offers**
-**Users and Merchants:**
+**Gpay Users and Merchants:**
 - Must be notified of eligible rewards and cashback.
 - Must be able to redeem offers directly within the app.
 
 ### **3.5 Reporting and Analytics**
-**Users:**
+**Gpay Users:**
 - Must be able to view categorized transaction history and monthly spending summaries.
 
 **Merchants:**
@@ -165,30 +165,30 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 - Must generate detailed reports on transaction volumes and fraud detection.
 
 ### **3.6 Communication**
-**Users, Merchants, and Support Team:**
+**Gpay Users, Merchants, and Support Team:**
 - Must be able to communicate via in-app chat or call for issue resolution.
 - Must receive instant notifications for updates and offers.
 
 ### **3.7 Customer Support**
-**All Users:**
+**All Gpay Users:**
 - Must be able to access support via chat, email, or phone.
 - FAQs and troubleshooting guides must be available in-app.
 
 ### **3.8 Security**
-**All Users:**
+**All Gpay Users:**
 - Must ensure two-factor authentication for all transactions.
-- User data must be encrypted in transit and at rest.
+- Gpay User data must be encrypted in transit and at rest.
 
 ---
 
 ## **4. Non-Functional Requirements**
 
 ### **4.1 Performance**
-- Transactions must be processed promptly to ensure a seamless user experience under normal conditions.
+- Transactions must be processed promptly to ensure a seamless Gpay User experience under normal conditions.
 - Notifications must be delivered in real time.
 
 ### **4.2 Scalability**
-- The platform must support a growing number of users and transactions without performance degradation.
+- The platform must support a growing number of Gpay Users and transactions without performance degradation.
 - New features must be integrated seamlessly.
 
 ### **4.3 Reliability**
@@ -196,7 +196,7 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 - Backup systems must ensure data integrity during failures.
 
 ### **4.4 Usability**
-- The app must have an intuitive and accessible interface for all users.
+- The app must have an intuitive and accessible interface for all Gpay Users.
 - The platform must support multiple languages for broader reach.
 
 ### **4.5 Compliance**
@@ -206,4 +206,4 @@ This document outlines the user requirements for **GPay**, a digital payment pla
 ---
 
 ## **5. Conclusion**
-This document defines the user requirements for the GPay platform. It serves as a comprehensive guide for the development team to build a secure, scalable, and user-friendly digital payment solution.
+This document defines the Gpay User requirements for the GPay platform. It serves as a comprehensive guide for the development team to build a secure, scalable, and Gpay User-friendly digital payment solution.
