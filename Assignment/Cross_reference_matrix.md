@@ -1,6 +1,6 @@
-# Cross-Reference Matrix for Google Pay Clone Project
+# Cross-Reference Matrix for Google Pay   Project
 
-This matrix maps the **stakeholders**, **requirements**, **architecture/design components**, and **testing scenarios** for the Google Pay clone project.
+This matrix maps the **stakeholders**, **requirements**, **architecture/design components**, and **testing scenarios** for the Google Pay   project.
 
 | **Stakeholder/Category**          | **URD Section**                                      | **SRS Section**                                           | **Architecture/Design Topics**                            | **Testing Scenarios**                                           | **Diagram**                    |
 |-----------------------------------|-----------------------------------------------------|----------------------------------------------------------|------------------------------------------------------------|--------------------------------------------------------------|--------------------------------|
@@ -25,7 +25,7 @@ This matrix maps the **stakeholders**, **requirements**, **architecture/design c
 #### **Project Sponsor**  
 - **URD Section**: The **purpose (1.1)** and **scope (1.2)** define the overall objectives and boundaries of the project. The sponsor oversees ensuring these objectives align with the business goals.  
 - **SRS Section**: The **scope (1.2)** in the SRS elaborates on the deliverables, focusing on high-level expectations.  
-- **Architecture/Design Topics**: The **System Context Diagram** illustrates how the Google Pay clone integrates with external entities like Gpay Users, merchants, banks, and payment networks.  
+- **Architecture/Design Topics**: The **System Context Diagram** illustrates how the Google Pay   integrates with external entities like Gpay Users, merchants, banks, and payment networks.  
 - **Testing Scenarios**: Not applicable directly since the sponsor’s role is at the strategic level.  
 - **Diagram**: The **System Context Diagram** provides a visual overview of the system's interaction with external stakeholders.  
 
