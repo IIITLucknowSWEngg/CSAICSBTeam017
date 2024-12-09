@@ -56,8 +56,7 @@ GPay is a mobile and web application that facilitates digital transactions, user
 ## 3. System Architecture
 
 ### 3.1 Architectural Design
-
-![alt text](Diagrams/Design/a5.png)
+![alt text](<Diagrams/Design/image copy.png>)
 
 GPay uses a microservices-based architecture with the following subsystems:  
 - **Authentication Service**: Manages user login and session management.  
@@ -68,7 +67,7 @@ GPay uses a microservices-based architecture with the following subsystems:
 #### Diagram
 
 ### 3.2 Decomposition Description
-![alt text](Diagrams/Design/image-1.png)
+![Decomposition Description](Diagrams/Design/image-1.png)
 
 Subsystems interact via APIs:  
 - **Authentication** provides user tokens.  
@@ -76,7 +75,7 @@ Subsystems interact via APIs:
 - **Notification** integrates with email/SMS services.  
 
 ### 3.3 Design Rationale
-![alt text](Diagrams/Design/image-2.png)
+![Design Rationale](Diagrams/Design/image-2.png)
 
 The microservices architecture ensures scalability and easier maintenance. It isolates concerns, enabling independent deployment and testing.
 
