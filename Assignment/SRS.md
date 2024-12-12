@@ -193,8 +193,6 @@ graph TD
 - **Login**: Merchant logs in with Gpay User ID and Token ID.
 - **Token ID Verification**: If Token ID is valid, the system redirects to Merchant Interface; otherwise, stays in Gpay User Interface.
 - **Action Selection**: Merchant selects "Process Payment" option.
-- **QR Code Scanning**: Merchant scans customer QR code.
-- **Enter Payment Details**: Merchant enters the payment amount.
 - **Payment Confirmation**: Merchant confirms the payment.
 - **Transaction Notification**: System notifies the merchant of payment success.
 - **Transaction History**: System updates the transaction history for the merchant.
