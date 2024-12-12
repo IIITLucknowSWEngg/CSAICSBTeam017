@@ -277,6 +277,20 @@ Notification --> FetchNotifications
 
 ![Alt text](https://c4model.com/images/c4-overview.png)
 
+# Levels of System Design
+
+## Level 1: Context
+At this level, the focus is on the big picture, showing how the system interacts with users and external systems. It highlights the system's purpose and boundaries.
+
+## Level 2: Containers
+This level zooms in to show the different containers (applications, services, databases, etc.) that make up the system. It demonstrates how the system's components communicate internally and externally.
+
+## Level 3: Components
+At the component level, the diagram zooms further into one container to illustrate its internal structure. It identifies key components, their responsibilities, and how they interact within the container.
+
+## Level 4: Code
+The final level shows the implementation details of a specific component, such as class diagrams or code structure, providing a deep dive into how the component is built.
+
 
 
 
