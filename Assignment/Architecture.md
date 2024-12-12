@@ -273,10 +273,14 @@ Notification --> FetchNotifications
 
 ---
 
+# C4 Model for Visualising Software Architecture
+
+![Alt text](https://c4model.com/images/c4-overview.png)
 
 
 
-# 3. Deployment Diagram - Google Pay
+
+# 4. Deployment Diagram - Google Pay
 
 ```plantuml
 @startuml
