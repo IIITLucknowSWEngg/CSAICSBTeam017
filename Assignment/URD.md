@@ -8,7 +8,7 @@ This document outlines the Gpay User requirements for **GPay**, a digital paymen
 
 ## **Table of Contents**
 
-1. [Gpay User Stories](#1-Gpay User-stories)  
+1. [Gpay User Stories](#1-Gpay-User-stories)  
 2. [Use Cases](#2-use-cases)  
 3. [Functional Requirements](#3-functional-requirements)  
 4. [Non-Functional Requirements](#4-non-functional-requirements)  
