@@ -147,4 +147,13 @@ Special thanks to our professor **Vinaya Sathyanarayana**, mentors, and the open
 
 ---
 
+## 📸 Viva Screenshots
+
+![Viva Screenshot 1](./ss1.jpg)
+
+![Viva Screenshot 2](./ss2.jpg)
+
+---
+
 *Crafted with dedication by Kernel Crypters Coders* ✨
+
