@@ -1,209 +1,107 @@
-# **Gpay User Requirements Document (URD) for GPay**
+# **Gpay User Stories**
 
-## **Overview**
+## **Gpay User 1: End Gpay User**
 
-This document outlines the Gpay User requirements for **GPay**, a digital payment platform that facilitates seamless transactions for Gpay Users, merchants, and banks while ensuring robust technical support. The platform aims to provide a secure and efficient way for Gpay Users to send and receive money, make purchases, and manage their finances.
+- **Actor**: A digital-savvy individual looking for a simple and secure way to manage their finances, pay bills, and transfer money.
 
----
+### **User Story 1: Bill Payments**
+- **As an end GPay user**, I want to be able to pay my utility bills directly through the app so that I can manage my expenses efficiently.
+- **Acceptance Criteria**:
+  1. I can view and select bill types (electricity, water, gas, etc.).
+  2. I can add and link multiple billers to my account.
+  3. I receive confirmation and a digital receipt after payment.
 
-## **Table of Contents**
+### **User Story 2: Money Transfer**
+- **As an end GPay user**, I want to send money to my friends and family using their phone number or UPI ID so that I can easily transfer money without needing bank details.
+- **Acceptance Criteria**:
+  1. I can select a recipient by phone number, UPI ID, or QR code.
+  2. I can securely enter the transfer amount and confirm with my PIN or biometric authentication.
+  3. I receive an instant confirmation notification after the transaction.
 
-1. [Gpay User Stories](#1-Gpay-User-stories)  
-2. [Use Cases](#2-use-cases)  
-3. [Functional Requirements](#3-functional-requirements)  
-4. [Non-Functional Requirements](#4-non-functional-requirements)  
-
----
-
-## **1. Gpay User Stories**
-
-### **Gpay User 1: End Gpay User**
-- **Scenario**: I want a secure and simple way to transfer money, pay bills, and track my expenses.
-- **Goals**:
-  1. Send and receive money using phone numbers, QR codes, or UPI IDs.
-  2. Pay bills and recharge services with ease.
-  3. Link multiple bank accounts for seamless transactions.
-  4. View transaction history and receive real-time notifications.
-  5. Avail cashback and rewards for eligible transactions.
-- **Pain Points**:
-  - Failed transactions with delayed refunds.
-  - Lack of clear categorization of expenses.
+### **User Story 3: Expense Management**
+- **As an end GPay user**, I want to categorize and track my spending so that I can manage my expenses and understand my financial habits better.
+- **Acceptance Criteria**:
+  1. I can view a categorized transaction history (e.g., groceries, dining, utilities).
+  2. I can set spending limits or budgets for different categories.
+  3. I receive alerts for overspending in any category.
 
 ---
 
-### **Gpay User 2: Merchant**
-- **Scenario**: I own a business and want a reliable payment solution to manage transactions and attract customers.
-- **Goals**:
-  1. Register my business and start accepting digital payments quickly.
-  2. Generate and share QR codes for easy payment.
-  3. Monitor daily transactions and sales performance.
-  4. Receive instant payment notifications and settle funds promptly.
-  5. Access business-specific cashback or promotional offers.
-- **Pain Points**:
-  - Difficulty in reconciling payments with sales.
-  - Delayed settlement of funds impacting cash flow.
+## **Gpay User 2: Merchant**
+
+- **Actor**: A small business owner or shopkeeper seeking a reliable, easy-to-integrate payment solution for accepting digital payments.
+
+### **User Story 1: Payment Collection**
+- **As a merchant**, I want to generate a QR code to receive payments from my customers, so that I can easily collect payments without handling cash.
+- **Acceptance Criteria**:
+  1. I can generate a unique QR code for my store or specific items.
+  2. I can display the QR code at my store or send it digitally to customers.
+  3. I receive a real-time notification when a payment is made.
+
+### **User Story 2: Payment Tracking**
+- **As a merchant**, I want to view a detailed summary of my transactions and sales on a dashboard, so that I can track my business’s performance easily.
+- **Acceptance Criteria**:
+  1. I can access a transaction report with a breakdown of sales, amounts, and customers.
+  2. I can filter transactions by date or category (e.g., cash payments, digital payments).
+  3. I receive a daily or weekly summary of my earnings.
+
+### **User Story 3: Fund Settlement**
+- **As a merchant**, I want to ensure that my funds are settled into my linked bank account on time, so that I can maintain cash flow without delays.
+- **Acceptance Criteria**:
+  1. I can view the status of my funds (pending or settled).
+  2. I receive notifications when funds are successfully transferred to my bank account.
+  3. I can choose between instant or scheduled fund settlements.
 
 ---
 
-### **Gpay User 3: Bank Integration Manager**
-- **Scenario**: I manage the backend payment infrastructure and ensure smooth financial operations for Gpay Users and merchants.
-- **Goals**:
-  1. Provide secure APIs for UPI and other payment methods.
-  2. Monitor and resolve transaction failures promptly.
-  3. Ensure compliance with financial regulations.
-  4. Generate detailed reports on transaction volumes and trends.
-  5. Collaborate with GPay to improve payment reliability and speed.
-- **Pain Points**:
-  - High volume of failed transactions during peak periods.
-  - Challenges in identifying and addressing fraud.
+## **Gpay User 3: Bank Integration Manager**
+
+- **Actor**: A technical manager responsible for ensuring smooth payment processing and financial infrastructure for GPay.
+
+### **User Story 1: API Integration Management**
+- **As a bank integration manager**, I want to ensure the APIs used by GPay are secure and functional, so that payment processing is smooth and reliable.
+- **Acceptance Criteria**:
+  1. I can test and monitor the performance of APIs used for UPI and other payment methods.
+  2. I can receive real-time alerts about any issues with the APIs.
+  3. I can access detailed logs for troubleshooting and analysis.
+
+### **User Story 2: Fraud Detection**
+- **As a bank integration manager**, I want to monitor transaction patterns for suspicious activity, so that I can prevent fraudulent transactions from affecting users.
+- **Acceptance Criteria**:
+  1. I can review flagged transactions and investigate anomalies.
+  2. I can collaborate with GPay to block suspicious accounts or transactions.
+  3. I can generate reports detailing suspected fraudulent activity.
+
+### **User Story 3: Regulatory Compliance**
+- **As a bank integration manager**, I want to ensure all transactions processed through GPay comply with financial regulations, so that we meet legal requirements.
+- **Acceptance Criteria**:
+  1. I can access compliance checklists for financial regulations (e.g., KYC, AML).
+  2. I can generate audit trails for transactions to meet regulatory standards.
+  3. I receive notifications when there are updates to compliance regulations.
 
 ---
 
-### **Gpay User 4: Technical and Support Team**
-- **Scenario**: I maintain the platform’s performance and resolve Gpay User issues efficiently.
-- **Goals**:
-  1. Monitor platform uptime and resolve performance bottlenecks.
-  2. Provide prompt support to Gpay Users facing transaction issues.
-  3. Analyze logs to identify root causes of failures.
-  4. Ensure quick rollouts of updates and bug fixes.
-  5. Communicate with stakeholders to improve Gpay User experience.
-- **Pain Points**:
-  - Limited visibility into root causes of technical glitches.
-  - Handling high volumes of support requests during outages.
+## **Gpay User 4: Technical and Support Team**
 
----
+- **Actor**: A support and technical team member responsible for maintaining the platform’s performance, fixing bugs, and addressing user issues.
 
-## **2. Use Cases**
+### **User Story 1: Platform Monitoring**
+- **As a member of the technical support team**, I want to monitor the platform’s performance, so that I can identify and resolve issues before they affect users.
+- **Acceptance Criteria**:
+  1. I can access real-time monitoring dashboards that show platform health.
+  2. I receive alerts if the platform goes down or experiences performance issues.
+  3. I can track ongoing issues and monitor their resolution status.
 
-### **Use Case 1: Money Transfer**
-- **Actor**: End Gpay User
-- **Steps**:
-  1. Open the app and select the transfer option.
-  2. Enter recipient details (phone number, UPI ID, or QR code).
-  3. Enter the amount and confirm the payment with a PIN.
-  4. Receive confirmation and a digital receipt.
-- **Outcome**: The Gpay User successfully transfers money securely and receives instant confirmation.
+### **User Story 2: Issue Resolution**
+- **As a member of the technical support team**, I want to analyze and resolve GPay user issues efficiently, so that users experience minimal disruption.
+- **Acceptance Criteria**:
+  1. I can access user support tickets and prioritize them based on severity.
+  2. I can investigate the root cause of issues using transaction logs and diagnostics tools.
+  3. I can communicate updates to the user and resolve issues promptly.
 
----
-
-### **Use Case 2: Merchant Payments**
-- **Actor**: Merchant
-- **Steps**:
-  1. Register the business and link a bank account.
-  2. Generate a QR code or payment link for customers.
-  3. Receive payments and instant notifications.
-  4. View transaction summaries on the merchant dashboard.
-- **Outcome**: The merchant receives payments promptly and manages transactions effectively.
-
----
-
-### **Use Case 3: Transaction Monitoring**
-- **Actor**: Bank Integration Manager
-- **Steps**:
-  1. Monitor transaction data in real time via API integrations.
-  2. Identify and flag failed or suspicious transactions.
-  3. Resolve issues promptly and notify Gpay Users.
-  4. Generate compliance reports as required.
-- **Outcome**: The bank ensures smooth payment processing and regulatory compliance.
-
----
-
-### **Use Case 4: Gpay User Support**
-- **Actor**: Technical and Support Team
-- **Steps**:
-  1. Receive a Gpay User complaint or support ticket.
-  2. Analyze transaction logs to identify the issue.
-  3. Resolve the issue and update the Gpay User with a solution.
-  4. Document recurring issues for platform improvement.
-- **Outcome**: The support team resolves Gpay User concerns promptly, enhancing trust in the platform.
-
----
-
-## **3. Functional Requirements**
-
-### **3.1 Gpay User Registration and Login**
-**Gpay Users, Merchants, and Banks:**
-- Must be able to register using a phone number or email.
-- Must be able to log in with secure credentials and biometric options.
-- Password reset and account recovery options must be available.
-
-### **3.2 Account Management**
-**Gpay Users:**
-- Must be able to link and manage multiple bank accounts.
-- Must be able to update personal details and payment preferences.
-
-**Merchants:**
-- Must be able to update business details and bank account information.
-- Must have options to enable auto-settlement of funds.
-
-### **3.3 Payments and Transactions**
-**Gpay Users:**
-- Must be able to initiate money transfers via phone numbers, UPI IDs, or QR codes.
-- Must be able to schedule recurring payments (e.g., utility bills).
-
-**Merchants:**
-- Must be able to generate and share payment links or QR codes.
-- Must receive notifications for successful payments.
-
-**Banks:**
-- Must ensure secure and seamless transaction processing.
-- Must provide APIs for real-time payment updates.
-
-### **3.4 Rewards and Offers**
-**Gpay Users and Merchants:**
-- Must be notified of eligible rewards and cashback.
-- Must be able to redeem offers directly within the app.
-
-### **3.5 Reporting and Analytics**
-**Gpay Users:**
-- Must be able to view categorized transaction history and monthly spending summaries.
-
-**Merchants:**
-- Must be able to access sales and transaction performance reports.
-
-**Banks:**
-- Must generate detailed reports on transaction volumes and fraud detection.
-
-### **3.6 Communication**
-**Gpay Users, Merchants, and Support Team:**
-- Must be able to communicate via in-app chat or call for issue resolution.
-- Must receive instant notifications for updates and offers.
-
-### **3.7 Customer Support**
-**All Gpay Users:**
-- Must be able to access support via chat, email, or phone.
-- FAQs and troubleshooting guides must be available in-app.
-
-### **3.8 Security**
-**All Gpay Users:**
-- Must ensure two-factor authentication for all transactions.
-- Gpay User data must be encrypted in transit and at rest.
-
----
-
-## **4. Non-Functional Requirements**
-
-### **4.1 Performance**
-- Transactions must be processed promptly to ensure a seamless Gpay User experience under normal conditions.
-- Notifications must be delivered in real time.
-
-### **4.2 Scalability**
-- The platform must support a growing number of Gpay Users and transactions without performance degradation.
-- New features must be integrated seamlessly.
-
-### **4.3 Reliability**
-- The platform must ensure high availability, with minimal downtime and uninterrupted service.
-- Backup systems must ensure data integrity during failures.
-
-### **4.4 Usability**
-- The app must have an intuitive and accessible interface for all Gpay Users.
-- The platform must support multiple languages for broader reach.
-
-### **4.5 Compliance**
-- The platform must comply with financial and data protection regulations (e.g., GDPR, PCI DSS).
-- Logs and records must be maintained for audit purposes.
-
----
-
-## **5. Conclusion**
-This document defines the Gpay User requirements for the GPay platform. It serves as a comprehensive guide for the development team to build a secure, scalable, and Gpay User-friendly digital payment solution.
+### **User Story 3: Software Updates and Bug Fixes**
+- **As a member of the technical support team**, I want to roll out updates and bug fixes quickly, so that the platform remains functional and reliable for all users.
+- **Acceptance Criteria**:
+  1. I can deploy patches and updates without affecting platform uptime.
+  2. I can monitor the impact of updates and bug fixes in real time.
+  3. I can document and track recurring issues for future updates.
