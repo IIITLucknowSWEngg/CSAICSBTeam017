@@ -143,4 +143,4 @@ This document outlines the test cases for Google Pay v1.0, covering both functio
 
 ## 4. Conclusion
 
-The above test cases have been designed to validate Google Pay v1.0 for both functionality and non-functionality. These cases cover a wide range of scenarios from basic operations like sending money and paying bills to edge cases involving error handling, performance under load, and security concerns. Additionally, all usability aspects are considered
+The above test cases have been designed to validate Google Pay for both functionality and non-functionality. These cases cover a wide range of scenarios from basic operations like sending money and paying bills to edge cases involving error handling, performance under load, and security concerns. Additionally, all usability aspects are considered
