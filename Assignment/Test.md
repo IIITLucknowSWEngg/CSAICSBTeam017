@@ -1,4 +1,4 @@
-# Test Cases for Google Pay v1.0
+# Test Cases for Google Pay
 
 ## Table of Contents
 
